@@ -8,7 +8,7 @@
 
 1. C# 기초 구동
 실행하는 방법 및 프로젝트 생성 방법 등 수업에 활용할 수 있는 기초적인 부분을 배움.
-
+////////////////////////////////////////////////////////
 2. C# 활용
 INT, STRING, LONG 등의 함수를 지정 해밨음.
 
@@ -31,7 +31,7 @@ namespace ConsoleApp5
     }
 }
 
-
+////////////////////////////////////////////////////////
 
 3. Hello world
 이제 본격적인 코딩의 시작이다.
@@ -47,6 +47,8 @@ namespace ConsoleApp5
     }
 }
 
+////////////////////////////////////////////////////////
+
 4. 변수
 
 string name = "홍길동";
@@ -54,5 +56,63 @@ Console.WriteLine("안녕하세요.");
 Console.WriteLine($"나는 {name} 입니다");
 
 이런식으로 변수를 설정해서 출력도 해보았다.
+
+////////////////////////////////////////////////////////
+
+5. MINI QUIZ !!!!!
+
+Q) 
+변수를 두개 만듭니다.
+string greeet;
+string name;
+
+---------------------
+반갑습니다.
+저는 이순신입니다.
+
+
+A)
+
+namespace ConsoleApp5
+{
+    class MainClass
+    {
+         static void Main(String[] args)
+        {
+            string greet = "반갑습니다.";
+            string name = "이순신";
+            Console.WriteLine(greet);
+            Console.WriteLine($"저는 {name} 입니다");
+
+        }
+    }
+}
+
+성공했다 아직까진 쉽다.
+
+namespace ConsoleApp5
+{
+    class MainClass
+    {
+         static void Main(String[] args)
+        {
+            string greet = "반갑습니다.";
+            string greet2 = "안녕하세요.";
+            string name = "이순신";
+            int age = 479;
+            Console.WriteLine("{0} {1}", greet,greet2);
+            Console.WriteLine($"저는 {name}, {age}살 입니다");
+
+        }
+    }
+}
+
+이런식으로 다른 방식도 시도 해봤다.
+
+////////////////////////////////////////////////////////
+
+6. 
+
+
 
 
