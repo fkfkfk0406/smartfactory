@@ -116,6 +116,42 @@ namespace ConsoleApp5
 
 ////////////////////////////////////////////////////////
 
+7. MINI QUIZ 2 !!!!!!
+
+Q) 500 - 300을 변수를 이용하여 결과를 출력하라.
+A) 
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 500;
+            int y = 300;
+            int z = x - y;
+            Console.WriteLine(z);
+        }
+    }
+}
+
+Q2) 너비와 높이를 입력받아서 넓이를 구하라,,!!!!
+A) 
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("너비를 입력해주세요 : ");
+            int width = int.Parse(Console.ReadLine());
+            Console.Write("높이를 입력해주세요 : ");
+            int height = int.Parse(Console.ReadLine());
+            int result = width * height;
+            Console.WriteLine($"넓이는 {result} 입니다." );   
+        }
+    }
+}
+
 
 
 
