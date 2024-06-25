@@ -3,6 +3,48 @@
 ////////////////////////////////////////////////////////
 - 적절한 마인드셋 확립
 - 열심히 하자
-- 
+- C# 은 많이 안만져봤는데 열심히 해야겠다 진짜 
 ////////////////////////////////////////////////////////
+
+1. C# 기초 구동
+실행하는 방법 및 프로젝트 생성 방법 등 수업에 활용할 수 있는 기초적인 부분을 배움.
+
+2. C# 활용
+INT, STRING, LONG 등의 매개변수를 지정 해밨음
+
+EX)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class MainClass
+    {
+         Void Main(string[] args) <------ string Main(~~ , long Main(~~~, int Main(~~~~
+        {
+            return 100;
+        }
+    }
+}
+
+
+
+3. Hello world
+이제 본격적인 코딩의 시작이다.
+
+namespace ConsoleApp5
+{
+    class MainClass
+    {
+         static void Main(String[] args)
+        {
+            Console.WriteLine("Hello World!!!");
+        }
+    }
+}
+
 
