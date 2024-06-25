@@ -13,7 +13,8 @@
 INT, STRING, LONG 등의 함수를 지정 해밨음.
 
 EX)
-
+<pre>
+<code>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +31,8 @@ namespace ConsoleApp5
         }
     }
 }
-
+</code>
+</pre>
 ***
 
 3. Hello world
