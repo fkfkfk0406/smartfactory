@@ -178,6 +178,26 @@ namespace ConsoleApp6
     }
 }
 
+A2) 소수점까지 표현 해보았다.
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("너비를 입력 하세요 : ");
+            int width = int.Parse(Console.ReadLine());
+            Console.WriteLine("높이를 입력 하세요 : ");
+            int height = int.Parse(Console.ReadLine());
+            double result = (width * height) / 2.0 ;    
+            Console.WriteLine($"넓이는 {result} 입니다.");
+        }
+    }
+}
+
+// double result = (width * height) / 2.0 ;  
+-> 결과값으로 소수점까지 표현하기위해 double 을 사용함, 그리고 나눠주는값을 실수값으로 바꿈
 
 
 
