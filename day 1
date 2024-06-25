@@ -141,16 +141,44 @@ namespace ConsoleApp6
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {    
+            //1. 변수 선언 및 입력부
             Console.Write("너비를 입력해주세요 : ");
             int width = int.Parse(Console.ReadLine());
             Console.Write("높이를 입력해주세요 : ");
             int height = int.Parse(Console.ReadLine());
+
+            //2. 알고리즘 수식
             int result = width * height;
+
+            //3. 출력부
             Console.WriteLine($"넓이는 {result} 입니다." );   
         }
     }
 }
+
+Q3) 너비와 높이를 입력받아 삼각형의 넓이를 구하라,,!!!!
+A) 
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1. 변수선언 및 입력부
+            Console.WriteLine("너비를 입력 하세요 : ");
+            int width = int.Parse(Console.ReadLine());
+            Console.WriteLine("높이를 입력 하세요 : ");
+            int height = int.Parse(Console.ReadLine());
+            //2. 알고리즘 수식
+            int result = (width * height) / 2;
+            //3. 출력부
+            Console.WriteLine($"넓이는 {result} 입니다.");
+        }
+    }
+}
+
+
 
 
 
