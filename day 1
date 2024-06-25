@@ -10,7 +10,7 @@
 실행하는 방법 및 프로젝트 생성 방법 등 수업에 활용할 수 있는 기초적인 부분을 배움.
 
 2. C# 활용
-INT, STRING, LONG 등의 매개변수를 지정 해밨음
+INT, STRING, LONG 등의 함수를 지정 해밨음.
 
 EX)
 
@@ -46,5 +46,13 @@ namespace ConsoleApp5
         }
     }
 }
+
+4. 변수
+
+string name = "홍길동";
+Console.WriteLine("안녕하세요.");
+Console.WriteLine($"나는 {name} 입니다");
+
+이런식으로 변수를 설정해서 출력도 해보았다.
 
 
