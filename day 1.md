@@ -38,6 +38,8 @@ namespace ConsoleApp5
 3. Hello world
 이제 본격적인 코딩의 시작이다.
 
+<pre>
+<code>
 namespace ConsoleApp5
 {
     class MainClass
@@ -48,14 +50,19 @@ namespace ConsoleApp5
         }
     }
 }
-
+</code>
+</pre>
+    
 ***
 
 4. 변수
-
+<pre>
+<code>
 string name = "홍길동";
 Console.WriteLine("안녕하세요.");
 Console.WriteLine($"나는 {name} 입니다");
+</code>
+</pre>
 
 이런식으로 변수를 설정해서 출력도 해보았다.
 
@@ -74,7 +81,8 @@ string name;
 
 
 A)
-
+<pre>
+<code>
 namespace ConsoleApp5
 {
     class MainClass
@@ -89,9 +97,13 @@ namespace ConsoleApp5
         }
     }
 }
+</pre>
+</code>
 
 성공했다 아직까진 쉽다.
 
+<pre>
+<code>
 namespace ConsoleApp5
 {
     class MainClass
@@ -108,6 +120,8 @@ namespace ConsoleApp5
         }
     }
 }
+</code>
+</pre>
 
 이런식으로 다른 방식도 시도 해봤다.
 
@@ -122,6 +136,8 @@ namespace ConsoleApp5
 
 Q) 500 - 300을 변수를 이용하여 결과를 출력하라.
 A) 
+<pre>
+<code>
 namespace ConsoleApp6
 {
     internal class Program
@@ -135,9 +151,14 @@ namespace ConsoleApp6
         }
     }
 }
+</code>
+</pre>
+
 
 Q2) 너비와 높이를 입력받아서 넓이를 구하라,,!!!!
 A) 
+<pre>
+<code>
 namespace ConsoleApp6
 {
     internal class Program
@@ -154,13 +175,19 @@ namespace ConsoleApp6
             int result = width * height;
 
             //3. 출력부
+        
             Console.WriteLine($"넓이는 {result} 입니다." );   
         }
     }
 }
+</code>
+</pre>
+
 
 Q3) 너비와 높이를 입력받아 삼각형의 넓이를 구하라,,!!!!
 A) 
+<pre>
+<code>
 namespace ConsoleApp6
 {
     internal class Program
@@ -179,9 +206,12 @@ namespace ConsoleApp6
         }
     }
 }
+</code>
+</pre>
 
 A2) 소수점까지 표현 해보았다.
-
+<pre>
+<code>
 namespace ConsoleApp6
 {
     internal class Program
@@ -197,6 +227,8 @@ namespace ConsoleApp6
         }
     }
 }
+</code>
+</pre>
 
 // double result = (width * height) / 2.0 ;  
 -> 결과값으로 소수점까지 표현하기위해 double 을 사용함, 그리고 나눠주는값을 실수값으로 바꿈
