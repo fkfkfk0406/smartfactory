@@ -81,6 +81,7 @@ string name;
 
 
 A)
+
 <pre>
 <code>
 namespace ConsoleApp5
@@ -135,7 +136,9 @@ namespace ConsoleApp5
 7. MINI QUIZ 2 !!!!!!
 
 Q) 500 - 300을 변수를 이용하여 결과를 출력하라.
+
 A) 
+
 <pre>
 <code>
 namespace ConsoleApp6
@@ -156,7 +159,9 @@ namespace ConsoleApp6
 
 
 Q2) 너비와 높이를 입력받아서 넓이를 구하라,,!!!!
+
 A) 
+
 <pre>
 <code>
 namespace ConsoleApp6
@@ -185,7 +190,9 @@ namespace ConsoleApp6
 
 
 Q3) 너비와 높이를 입력받아 삼각형의 넓이를 구하라,,!!!!
+
 A) 
+
 <pre>
 <code>
 namespace ConsoleApp6
@@ -210,6 +217,7 @@ namespace ConsoleApp6
 </pre>
 
 A2) 소수점까지 표현 해보았다.
+
 <pre>
 <code>
 namespace ConsoleApp6
