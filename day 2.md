@@ -29,7 +29,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/ <-- 마이크로 소프트에�
 
 ***
 
-'''C#
+'''
 namespace ConsoleApp7
 {
     internal class Program
