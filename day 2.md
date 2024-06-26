@@ -196,7 +196,7 @@ Console.WriteLine(greeting.ToLower());
 
 ```
 
-## 출력
+## 출력 결과
 
 ```
 
@@ -215,5 +215,78 @@ int b = 7;
 double c = (double)a / b; //(double)은 "캐스팅" 이라고 한다. -> 소수점까지 나타내기위해 한쪽을 실수값으로 맞춤. 아니면 안나옴 ㅋ
 Console.WriteLine(c);
 ```
+
+## 출력 결과
+```
+2.5714285714285716
+```
+
+***
+
+## 기습 퀴즈
+
+http://www.verthasys.co.kr/ 사이트에 올라온 문제이다.
+
+```
+프로그램 명: CtoF
+
+섭씨 온도를 화씨 온도로 변환하는 프로그램을 작성하세요.
+
+화씨 온도 = 9 / 5 * 섭씨온도 + 32
+
+입력
+1 에서 100 사이의 자연수가 입력으로 주어진다.
+
+출력
+소수점 둘째자리까지 출력한다.
+
+입출력 예
+-----------------------------------------------------------
+50
+
+122.0  
+
+--------------------------------------
+
+36
+
+
+
+96.8
+```
+
+## 풀이 및 출력
+
+```
+namespace C__TO_F_
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int cel = Int32.Parse(Console.ReadLine());
+            double feh = 0.0;
+
+            //코딩
+
+           feh = (double)cel * 9/5 + 32;
+
+            //출력
+            Console.WriteLine($"{feh:F2}");
+        }
+    }
+}
+```
+
+***
+```
+>C# Primitive Type
+>  >byte, short, long , double, string, char, bool
+
+이정도는 기억하기
+```
+***
+
+
 
 
