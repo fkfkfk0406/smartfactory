@@ -568,8 +568,59 @@ namespace whileapp01
 
 ```
 A) 짝수 (while문 사용)
+
+namespace whileapp01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            int sum = 0;
+
+            while(i <= 100) 
+            {
+                if(i % 2 == 0)
+                {
+                    sum += i;
+                }
+                i++;
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
+
+```
+```
+A) 홀수 (while문 사용)
+
+namespace whileapp01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            int sum = 0;
+
+            while(i <= 100) 
+            {
+                if(i % 2 != 0)
+                {
+                    sum += i;
+                }
+                i++;
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
+
 ```
 
+for 문은 할만했으나 whie문은 이상하게도 어려웠다,,,, 군대를 다녀오니 배웠던 전공도 가물가물하다
+열심히 복습하자,,,!
 
 
 
