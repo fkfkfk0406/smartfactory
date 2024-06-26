@@ -287,6 +287,34 @@ namespace C__TO_F_
 
 ***
 
+## 기습 퀴즈 2
 
+```
+반지름을 입력 받으면 원넓이를 구해주는 프로그램을 작성하라.
+단. 소수점 둘째자리까지만 출력하기.
+단, 원주율은 Math 클래스를 사용하기.
+```
 
+### 풀이 및 코드
+
+```
+namespace C__TO_F_
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("반지름의 길이를 입력하시오 : ");
+
+            double radius;
+            radius = double.Parse(Console.ReadLine());
+
+            double area = Math.PI * radius * radius;
+
+            Console.WriteLine($"넓이는 {area:F2} 입니다.");
+        }
+    }
+}
+```
+성공,,,
 
