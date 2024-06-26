@@ -80,5 +80,65 @@ MINI QUIZ!!
 </pre>
 
 여러가지 방법으로 변형해서도 코드를 작성해 보았다. 아직까지도 할만하다.
+
+***
+
+MINI QUIZ 2
+
+<pre>
+  <code>
+    namespace quiz01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int value1 = Int32.Parse(Console.ReadLine());
+            int value2 = Int32.Parse(Console.ReadLine());   
+
+            Console.WriteLine($"{value1} {value2}"); //100 200
+
+            //코딩~~~
+            //
+            //
+
+            Console.WriteLine($"{value1} {value2}"); //200 100
+        }
+    }
+}  
+  </code>
+</pre>
+
+***
+
+ANSWER 
+
+<pre>
+  <code>
+    namespace quiz01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int value1 = Int32.Parse(Console.ReadLine());
+            int value2 = Int32.Parse(Console.ReadLine());   
+
+            Console.WriteLine($"{value1} {value2}"); //100 200
+
+            int temp = value1;
+
+            value1 = value2;
+            value2 = temp;
+
+            Console.WriteLine($"{value1} {value2}"); //200 100
+        }
+    }
+}
+  </code>
+</pre>
+
+머리가 아팠다.
+
 ***
 
