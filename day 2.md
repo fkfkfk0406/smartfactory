@@ -178,11 +178,34 @@ Console.WriteLine(trimmedGreeting);
 
 ## 출력
 
-'''
+```
     안녕     
 안녕     
     안녕
 안녕
-'''
+```
 
-신기했다.
+## 예제코드 2
+
+```
+string greeting = "Good Morning";
+
+Console.WriteLine(greeting.ToUpper());
+
+Console.WriteLine(greeting.ToLower());
+
+```
+
+## 출력
+
+```
+
+GOOD MORNING
+good morning
+
+```
+
+***
+
+
+
