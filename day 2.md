@@ -279,12 +279,12 @@ namespace C__TO_F_
 ```
 
 ***
-```
->C# Primitive Type
->  >byte, short, long , double, string, char, bool
+
+> C# Primitive Type
+>   >byte, short, long , double, string, char, bool
 
 이정도는 기억하기
-```
+
 ***
 
 
