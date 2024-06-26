@@ -490,6 +490,8 @@ namespace ConsoleApp9
 _바다를 보지말고 물고기를 봐라,,,,,,!_
 
 ***
+## While 문
+
 
 
 
