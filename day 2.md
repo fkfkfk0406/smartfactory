@@ -140,3 +140,49 @@ namespace ConsoleApp7
 
 ***
 
+위에 링크된 마이크로소프트 C# 가이드에서 코딩연습을 해봤다.
+
+## 예제 코드
+
+<pre>
+  <code>
+    string greeting = "      Hello World!       ";
+Console.WriteLine($"[{greeting}]");
+
+string trimmedGreeting = greeting.TrimStart();
+Console.WriteLine($"[{trimmedGreeting}]");
+
+trimmedGreeting = greeting.TrimEnd();
+Console.WriteLine($"[{trimmedGreeting}]");
+
+trimmedGreeting = greeting.Trim();
+Console.WriteLine($"[{trimmedGreeting}]");
+  </code>
+</pre>
+
+<pre>
+  <code>
+    string greeting = "    안녕     ";
+Console.WriteLine(greeting);
+
+string trimmedGreeting = greeting.TrimStart();
+Console.WriteLine(trimmedGreeting);
+
+trimmedGreeting = greeting.TrimEnd();
+Console.WriteLine(trimmedGreeting);
+
+trimmedGreeting = greeting.Trim();
+Console.WriteLine(trimmedGreeting);
+  </code>
+</pre>
+
+## 출력
+
+'''
+    안녕     
+안녕     
+    안녕
+안녕
+'''
+
+신기했다.
