@@ -213,7 +213,7 @@ good morning
 int a = 18;
 int b = 7;
 double c = (double)a / b;
->         >(double)은 "캐스팅" 이라고 한다. -> 소수점까지 나타내기위해 한쪽을 실수값으로 맞춤. 아니면 안나옴 ㅋ
+>  >(double)은 "캐스팅" 이라고 한다. -> 소수점까지 나타내기위해 한쪽을 실수값으로 맞춤. 아니면 안나옴 ㅋ
 Console.WriteLine(c);
 ```
 
