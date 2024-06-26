@@ -430,7 +430,63 @@ namespace ConsoleApp9
 ```
 컴파일 해보면 "Hello, World!" 가 3번 반복된다.
 
+```
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int counter = 0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                counter = counter + i + 1;
+            }
+            Console.WriteLine(counter);
+        }
+     }
+}
+```
+
+눈 코딩으로 코딩근육을 득근 해보았다.
+
 ***
+
+## 기습 퀴즈 4 !!!!!!!!!!!!!!!!!!!!!!
+
+```
+1~100 까지의 합을 구하시오.
+for 문으로
+```
+
+## 풀이 및 코드
+
+```
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1 부터 100까지 합을 구해보세요, for 문으로
+            int num = 0;
+
+            for (int i = 0; i < 100; i++)
+            {
+                num += i + 1;
+            }
+            Console.WriteLine(num);
+        }
+     }
+}
+```
+
+됐다,,
+
+***
+
+## 오늘의 코딩 명언 _바다를 보지말고 물고기를 봐라,,,,,,!_
 
 
 
