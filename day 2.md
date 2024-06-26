@@ -405,3 +405,32 @@ namespace IFAPP01
 }
 ```
 해냈다,,!
+
+***
+
+## for 문
+
+### 굉장히 만만한 "Hello, World!" 로 해보았다.
+
+```
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1. 초기화조건, 2. 종료조건, 3. 증가감조건
+            for (int i = 0; i < 3; i++)
+            {
+                Console.WriteLine("Hello, World!");
+            }
+        }
+     }
+}
+```
+컴파일 해보면 "Hello, World!" 가 3번 반복된다.
+
+***
+
+
+
