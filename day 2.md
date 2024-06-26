@@ -318,3 +318,90 @@ namespace C__TO_F_
 ```
 성공,,,
 
+***
+
+## IF, ELSE IF, ELSE 사용해보기
+
+```
+namespace IFAPP01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int value = Int32.Parse(Console.ReadLine());
+            if (value == 100)
+            {
+                Console.WriteLine("if 로직 실행.");
+            }
+            else if (value == 200)
+            {
+                Console.WriteLine("else if 로직 실행");
+            }
+            else
+            {
+                Console.WriteLine("else 로직 실행");
+            }
+        }
+    }
+}
+```
+
+```
+namespace IFAPP01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string name = Console.ReadLine();
+            if (name == "홍길동")
+            {
+                Console.WriteLine("1. 나는 {0} 입니다.", name);
+            }
+            else if (name == "이순신")
+            {
+                Console.WriteLine("2. 나는 {0} 입니다.", name);
+            }
+            else
+            {
+                Console.WriteLine("3. 나는 {0} 입니다", name);
+            }
+        }
+    }
+}
+```
+
+## 기습퀴즈 3 !!!!!
+
+```
+정수 1개를 입력받아 홀수 또는 짝수를 출력하라
+ex) 100 -> 짝수, 200 -> 홀수
+```
+
+## 풀이 및 코드
+
+```
+namespace IFAPP01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("정수를 입력 하시오. : ");
+            int num = Int32.Parse(Console.ReadLine());
+            if (num%2==0)
+            {
+                Console.WriteLine("짝수 입니다.");
+            }
+            else
+            {
+                Console.WriteLine("홀수 입니다.");
+            }
+        }
+    }
+}
+```
+해냈다,,!
