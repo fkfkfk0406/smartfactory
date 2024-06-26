@@ -29,9 +29,6 @@ https://learn.microsoft.com/en-us/dotnet/csharp/ <-- 마이크로 소프트에�
 
 ***
 
-<pre>
-  <code>
-
 '''C#
 namespace ConsoleApp7
 {
@@ -44,14 +41,11 @@ namespace ConsoleApp7
 
             greeting = Console.ReadLine(); //값 할당, 초기화
 
-
             Console.WriteLine($"당신의 이름은 {greeting} 입니다"); //출력부
         }
     }
 }
-    
-  </code>
-</pre>
+'''
 
 이런것도 해봤따.
 
