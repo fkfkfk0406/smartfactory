@@ -410,7 +410,7 @@ namespace IFAPP01
 
 ## for 문
 
-### 굉장히 만만한 "Hello, World!" 로 해보았다.
+##### 굉장히 만만한 "Hello, World!" 로 해보았다.
 
 ```
 namespace ConsoleApp9
