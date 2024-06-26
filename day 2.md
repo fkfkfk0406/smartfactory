@@ -29,7 +29,8 @@ https://learn.microsoft.com/en-us/dotnet/csharp/ <-- 마이크로 소프트에�
 
 ***
 
-'''
+<pre>
+<code>
 namespace ConsoleApp7
 {
     internal class Program
@@ -43,7 +44,8 @@ namespace ConsoleApp7
         }
     }
 }
-'''
+</code>
+</pre>
 
 이런것도 해봤따.
 
