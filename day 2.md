@@ -51,3 +51,34 @@ namespace ConsoleApp7
 
 ***
 
+MINI QUIZ!!
+
+<pre>
+  <code>
+    namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //두 정수 value 1, value 2 를 입력받아 그 합을 출력하라.
+            int result;
+
+            Console.WriteLine("첫번째 값을 입력하시오 : ");
+            int value1 = Int32.Parse(Console.ReadLine());
+
+            Console.WriteLine("두번째 값을 입력하시오 : ");
+            int value2 = Int32.Parse(Console.ReadLine());
+
+            result = value1 + value2;
+
+            Console.WriteLine($"값은 {result} 입니다.");
+        }
+    }
+}
+  </code>
+</pre>
+
+여러가지 방법으로 변형해서도 코드를 작성해 보았다. 아직까지도 할만하다.
+***
+
