@@ -51,7 +51,7 @@ namespace ConsoleApp7
 
 ***
 
-MINI QUIZ!!
+## MINI QUIZ!!
 
 <pre>
   <code>
@@ -83,7 +83,7 @@ MINI QUIZ!!
 
 ***
 
-MINI QUIZ 2
+## MINI QUIZ 2
 
 <pre>
   <code>
@@ -109,9 +109,7 @@ MINI QUIZ 2
   </code>
 </pre>
 
-***
-
-ANSWER 
+## ANSWER 
 
 <pre>
   <code>
