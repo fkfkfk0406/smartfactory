@@ -515,6 +515,62 @@ namespace whileapp01
 
 위의 퀴즈 4번과 같은 문제를 while문 을 이용하여 실습해보았다.
 
+## 오늘의 마무리 마지막 LAST 퀴즈!!!!1
+
+```
+Q) 홀수의 합 과 짝수의 합을 구하시오.
+FOR, WHILE 둘 다 사용해서
+출력값 홀수 -> 2500, 짝수 -> 2550
+```
+
+```
+A) 짝수 (for문 사용)
+namespace whileapp01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;
+
+            for(int i = 0; i <= 100; i++) 
+            {
+                sum += i;
+                i++;
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
+```
+
+```
+A) 홀수 (for문 사용)
+namespace whileapp01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;
+
+            for(int i = 0; i < 100; i++) 
+            {
+                sum += i+1;
+                i++;
+                Console.WriteLine(sum);
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
+```
+
+```
+A) 짝수 (while문 사용)
+```
+
+
 
 
 
