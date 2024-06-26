@@ -492,6 +492,29 @@ _바다를 보지말고 물고기를 봐라,,,,,,!_
 ***
 ## While 문
 
+```
+namespace whileapp01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 0;
+            int sum = 0;
+
+            while(i <= 100)
+            {
+                sum += i;
+                i++;
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
+```
+
+위의 퀴즈 4번과 같은 문제를 while문 을 이용하여 실습해보았다.
+
 
 
 
