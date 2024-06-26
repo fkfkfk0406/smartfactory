@@ -27,5 +27,29 @@
 
 https://learn.microsoft.com/en-us/dotnet/csharp/ <-- 마이크로 소프트에서 제공하는 C# 가이드이다. 유용하게 사용하자.
 
+***
+
+<pre>
+  <code>
+    
+    namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            String greeting; //변수 선언
+            Console.WriteLine("이름을 입력해주세요");
+
+            greeting = Console.ReadLine(); //값 할당, 초기화
 
 
+            Console.WriteLine($"당신의 이름은 {greeting} 입니다"); //출력부
+        }
+    }
+}
+    
+  </code>
+</pre>
+
+이런것도 해봤따.
