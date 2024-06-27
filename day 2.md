@@ -531,44 +531,29 @@ namespace whileapp01
     {
         static void Main(string[] args)
         {
-            int sum = 0;
+            int sum1 = 0;
+            int sum2 = 0;
 
-            for(int i = 0; i <= 100; i++) 
-            {
-                sum += i;
-                i++;
+            for(int i = 0; i <= 100; i++) {
+                if (i % 2 == 0)
+                {
+                    sum1 += i;
+                }
+                else 
+                {
+                    sum2 += i;
+                }
             }
-            Console.WriteLine(sum);
+            Console.WriteLine(sum1);
+            Console.WriteLine(sum2);
         }
     }
 }
+
 ```
 
 ```
-A) 홀수 (for문 사용)
-namespace whileapp01
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            int sum = 0;
-
-            for(int i = 0; i < 100; i++) 
-            {
-                sum += i+1;
-                i++;
-                Console.WriteLine(sum);
-            }
-            Console.WriteLine(sum);
-        }
-    }
-}
-```
-
-```
-A) 짝수 (while문 사용)
-
+A) while문을 활용한 홀수 짝수
 namespace whileapp01
 {
     internal class Program
@@ -576,43 +561,23 @@ namespace whileapp01
         static void Main(string[] args)
         {
             int i = 0;
-            int sum = 0;
+            int sum1 = 0;
+            int sum2 = 0;
 
-            while(i <= 100) 
+            while (i <= 100)
             {
-                if(i % 2 == 0)
+                if (i % 2 != 0)
                 {
-                    sum += i;
+                    sum1 += i;
+                }
+                else
+                {
+                    sum2 += i;
                 }
                 i++;
             }
-            Console.WriteLine(sum);
-        }
-    }
-}
-
-```
-```
-A) 홀수 (while문 사용)
-
-namespace whileapp01
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            int i = 0;
-            int sum = 0;
-
-            while(i <= 100) 
-            {
-                if(i % 2 != 0)
-                {
-                    sum += i;
-                }
-                i++;
-            }
-            Console.WriteLine(sum);
+            Console.WriteLine(sum1);
+            Console.WriteLine(sum2);
         }
     }
 }
