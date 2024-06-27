@@ -486,6 +486,10 @@ namespace EXAMAPP01
 }
 ```
 혼자힘으로 하려니 어려워서 고생 좀 했다. 그래서 지피티를 조금 활용했다.
+-- 2단계 예쁘게 만든 코드에서 break와 return의 차이점이 궁금해졌다. --
+-- https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/statements/jump-statements --
+-- 마이크로 소프트 사이트 참조하기,,, ^ --
+
 
 ***
 
