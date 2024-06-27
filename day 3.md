@@ -502,7 +502,279 @@ namespace EXAMAPP01
 
 ***
 
+## 구구단을 출력하는 코드 예제
+```
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
 
+            for(int i = 2; i < 10; i++)
+            {
+                for (int j = 1; j < 10; j++)
+                {
+                    Console.WriteLine($"{i} * {j} = {i * j}");
+                }
+            }
+        }
+    }
+}
+
+```
+## 구구단을 9단부터 2단까지 출력
+```
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            for(int i = 9; i > 1; i--)
+            {
+                for (int j = 9; j > 0; j--)
+                {
+                    Console.WriteLine($"{i} * {j} = {i * j}");
+                }
+            }
+        }
+    }
+}
+```
+
+## 별그리기,,!
+```
+제약 : 50 이하의 정수가 입력됨을 가정합니다.﻿ 
+
+1단계 
+
+--------
+
+N? 5
+
+*
+
+**
+
+***
+
+****
+
+*****
+
+
+
+2단계
+
+N? 5
+
+*****
+
+****
+
+***
+
+**
+
+*
+
+
+
+3단계
+
+N? 5
+
+    *
+
+   **
+
+  ***
+
+ ****
+
+*****
+
+
+
+4단계
+
+N? 5
+
+ *****
+
+  ****
+
+   ***
+
+    **
+
+
+     *
+
+
+
+
+5단계 - 마름모
+
+(홀수만가능)
+
+N? 5
+
+   *
+
+  ***
+
+ *****
+
+  ***
+
+   *
+```
+
+## 풀이
+
+```
+1 단계]
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("50 이하의 정수를 입력하시오.");
+            int n = Int32.Parse(Console.ReadLine());
+
+            for(int i = 1; i <= n; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+
+
+2단계]
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("50 이하의 정수를 입력하시오.");
+            int n = Int32.Parse(Console.ReadLine());
+
+            for(int i = n; i > 0; i--)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+
+3단계]
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("50 이하의 정수를 입력하시오.");
+            int n = Int32.Parse(Console.ReadLine());
+
+            for(int i = 1; i <= n; i++)
+            {
+                for (int j = 0; j < n - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+
+4단계]
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("50 이하의 정수를 입력하시오.");
+            int n = Int32.Parse(Console.ReadLine());
+
+            for(int i = n; i > 0; i--)
+            {
+                for (int j = 0; j < n - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+
+5단계]
+namespace ConsoleApp12
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("50 이하의 정수를 입력하시오.");
+            int n = Int32.Parse(Console.ReadLine());
+
+            for(int i = 1; i <= n; i++)
+            {
+                for (int j = 0; j < n - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k < 2 * i - 1; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = n - 1; i > 0; i--)
+            {
+                for (int j = 0; j < n - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k < 2 * i - 1; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+```
+~~진짜하나도모르겠다. 좀 더 파고들고 코드를 뜯어봐야겠다.~~
+
+***
 
 
 
