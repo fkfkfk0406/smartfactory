@@ -486,9 +486,14 @@ namespace EXAMAPP01
 }
 ```
 혼자힘으로 하려니 어려워서 고생 좀 했다. 그래서 지피티를 조금 활용했다.
+
 -- 2단계 예쁘게 만든 코드에서 break와 return의 차이점이 궁금해졌다. --
--- https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/statements/jump-statements --
--- 마이크로 소프트 사이트 참조하기,,, ^ --
+
+-- https://learn.microsoft.com/ko-kr/dotnet/csharp/language-reference/statements/jump-statements
+
+-- 마이크로 소프트 사이트 참조하기,,,
+
+-- 점프 문은 컨트롤을 무조건 전송합니다. break 문은 가장 가까운 바깥쪽 반복 문 또는 switch 문을 종료합니다. continue 문은 가장 가까운 바깥쪽 반복 문의 새 반복을 시작합니다. return 문은 표시되는 함수의 실행을 종료하고 호출자에게 컨트롤을 반환합니다.
 
 
 ***
