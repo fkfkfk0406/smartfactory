@@ -495,11 +495,12 @@ namespace EXAMAPP01
 
 -- 점프 문은 컨트롤을 무조건 전송합니다. break 문은 가장 가까운 바깥쪽 반복 문 또는 switch 문을 종료합니다. continue 문은 가장 가까운 바깥쪽 반복 문의 새 반복을 시작합니다. return 문은 표시되는 함수의 실행을 종료하고 호출자에게 컨트롤을 반환합니다.
 
-
 ***
 
+## 연산자의 우선순위
+![제목 없음](https://github.com/fkfkfk0406/smartfactory/assets/91593653/1bd7cfab-034b-47a9-977f-ab63646909ce)
 
-
+***
 
 
 
