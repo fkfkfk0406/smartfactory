@@ -166,6 +166,70 @@ ASCII 코드,,, 이자식,,,
 
 ***
 
+## 퀴즈
+
+```
+정수형 배열 score를 만들고 
+
+
+
+순서대로 국어, 영어, 수학 성적을 입력받아
+
+
+
+총점과 평균을 출력하세요.
+
+
+
+----------------------------------
+
+100
+
+100
+
+100
+
+
+
+총점 : 300
+
+평균 : 100
+```
+
+## 풀이
+
+```
+namespace ConsoleApp13
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] score = new int[3];
+
+            Console.Write("국어 성적을 입력하시오 : ");
+            score[0] = Int32.Parse(Console.ReadLine());
+
+            Console.Write("영어 성적을 입력하시오 : ");
+            score[1] = Int32.Parse(Console.ReadLine());
+
+            Console.Write("수학 성적을 입력하시오 : ");
+            score[2] = Int32.Parse(Console.ReadLine());
+
+            int sum = score[0] + score[1] + score[2];
+
+            Console.Write("총점 : ");
+            Console.WriteLine($"{sum}");
+
+            Console.Write("평균 : ");
+            Console.WriteLine($"{(double)sum/3:F2}");
+
+        }
+    }
+}
+```
+
 
 
 
