@@ -66,13 +66,17 @@ namespace ConsoleApp13
 
 ```
 
+## 기습 단축키 설명
+
 ```
 주석 ctrl + k + c
 주석 해제 ctrl + k + u 
 --- 편리한 단축키 !!
 ```
+
 ## 예제 실습
 
+```
 namespace ConsoleApp13
 {
     internal class Program
@@ -122,7 +126,6 @@ namespace ConsoleApp13
     }
 }
 ```
-```
 
 ## mini quiz 응용
 
@@ -155,6 +158,16 @@ namespace ConsoleApp13
     }
 }
 ```
+
+***
+
+ASCII 코드,,, 이자식,,,
+문자열을 배우기 시작하니 머리아픈 ASCII 코드도 설명을 들었다
+
+***
+
+
+
 
 
 
