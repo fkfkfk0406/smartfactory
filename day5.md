@@ -280,7 +280,338 @@ namespace ConsoleApp16
 }
 ```
 
+## 퀴즈
+
+```
+namespace ScoreApp02
+
+{
+
+    internal class Program
+
+    {
+
+        //성적 입력 함수를 만들어 주세요. 3과목
+
+        static int[] InputThreeSocre()
+
+        {
+
+            int[] score = new int[3];
+
+            //코딩
+
+           //세 정수를 입력하는 로직
+
+            return socre;
+
+        }
+
+        static int TotalScore(int[] arr)
+
+        {
+
+            int totalscore = 0;
+
+//코딩
+
+// 국어, 영어, 수학 성적을 합하는 코딩 
+
+            return totalscore;
+
+        }
+
+        static double GetAvg(int totalScore)
+
+        {
+
+            double avg=0.0;
+
+// 총점에서 평균값을 만드는 코딩
+
+            return avg;
+
+        }
 
 
 
+        static void Main(string[] args)
+
+        {
+
+            //1. 세 성적 입력받기
+
+           //2. 총점 구하기
+
+           //3. 평균 구하기
+
+
+
+        }
+
+    }
+
+}
+```
+
+## 풀이
+
+```
+namespace ConsoleApp17
+{
+    internal class Program
+    {
+        static int[] InputThreeScore()
+        {
+            int[] score = new int[3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                if(i == 0)
+                {
+                    Console.Write("국어 점수를 입력하시오 : ");
+                }
+               else if(i == 1)
+                {
+                    Console.Write("영어 점수를 입력하시오 : ");
+                }
+                else if(i == 2)
+                {
+                    Console.Write("수학 점수를 입력하시오 : ");
+                }
+                score[i] = Int32.Parse(Console.ReadLine());
+            }
+            return score;
+        }
+        static int TotalScore(int[] score)
+        {
+            int totalScore = 0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                totalScore += score[i];
+            }
+
+            return totalScore;
+        }
+        static double GetAvg(int totalScore)
+        {
+            double avg = 0.0;
+            avg = totalScore / 3.0;
+            return avg;
+        }
+        static void Main(string[] args)
+        {
+            int[] score = InputThreeScore();
+            int totalScore = TotalScore(score);
+            double avg = GetAvg(totalScore);
+
+            Console.WriteLine($"총점 : {totalScore}");
+            Console.WriteLine($"평균 : {avg:F2}");
+        }
+    }
+}
+```
+
+## 클래스 타입 얘제 코드
+```
+namespace op01
+{
+    internal class Program
+    {
+        class Book
+        {
+            string Title;
+            decimal ISBN13;
+            string Contents;
+            string Author;
+            int PageCount;
+        }
+
+        class Student
+        {
+            public int ID;
+            public string Name;
+            public string Run()
+            {
+                return "학번 : " + this.ID + " " + this.Name + "달리다.";
+            }
+        }
+        static void Main(string[] args)
+        {
+
+            Book gulliver = new Book();
+            Student hong = new Student();
+            // 객체 초기화 <-- 값 넣기
+
+            hong.ID = 1;
+            hong.Name = "홍길동";
+
+            Console.WriteLine(hong.ID);
+            Console.WriteLine(hong.Name);
+            Console.WriteLine(hong.Run());
+        }
+    }
+}
+```
+
+## 교재 예제 실습
+
+```
+제곱 계산기
+namespace op01
+{
+    class Mathematics
+    {
+        public int f(int x)
+        {
+            return x * x;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Mathematics m = new Mathematics();
+            int result = m.f(5);
+            Console.WriteLine(result);
+        }
+    }
+}
+```
+
+## 예쁘게 바꿔봤다.
+
+```
+namespace op01
+{
+    class Mathematics
+    {
+
+        //멤버 변수
+        //생성자
+        //멤버 메소드
+        public int f(int x)
+        {
+            Console.Write("제곱 할 수를 입력하시오 : ");
+            x = Int32.Parse(Console.ReadLine());
+            return x * x;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Mathematics m = new Mathematics();
+            int result = m.f(5);
+            Console.WriteLine($"결과 : {result}");
+        }
+    }
+}
+```
+
+***
+
+## 교재 예제풀이 2
+
+```
+namespace ConsoleApp18
+{
+    internal class Program
+    {
+        class Person
+        {
+            string name;
+
+            public Person()
+                {
+                name = "홍길동";
+                Console.WriteLine("생성자 호출");
+                }
+        }
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("person 객체 생성되기 전.");
+            Person person = new Person();
+            Console.WriteLine("person 객체 생성된 후.");
+
+        }
+    }
+}
+```
+
+***
+
+```
+- call by value
+-> 변수가 가진 값을 복사하여 전달하므로 함수 내에서 값을 변경해도 원본 값은 변경되지 않는다.
+
+
+- call by reference
+-> 방식에서는 함수 내에서 인자로 전달된 변수의 값을 변경하면, 호출한 쪽에서도 해당 변수의 값이 변경된다. 이는 인자로 전달되는 값이 변수의 주소이므로, 함수 내에서 변수의 값을 변경하면 해당 주소에 저장된 값이 변경되기 때문이다.
+```
+
+## CALL BY VALUE 예제 코드
+```
+namespace swapbyvalue
+{
+    internal class Program
+    {
+        static void Swap(int a , int b)
+        {
+
+            int temp = b;
+            b = a;
+            a = temp;
+
+            Console.WriteLine($"{a} {b}");
+
+        }                                    
+
+        static void Main(string[] args)
+        {
+
+            int x = 3, y = 4;
+
+            Console.WriteLine($"{x} {y}");  // result = 3, 4
+            Swap(x, y);                     // result = 4, 3 후에 pop
+            Console.WriteLine($"{x} {y}");  // result = 3, 4
+
+        }
+    }
+}
+
+
+```
+## CALL BY REFERENCE 예제 코드
+```
+namespace swapbyvalue
+{
+    internal class Program
+    {
+        static void Swap(ref int a , ref int b) //a, b -> pointer
+        {
+
+            int temp = b;
+            b = a;
+            a = temp;
+
+            Console.WriteLine($"{a} {b}");
+
+        }                                    //변수가 값이 아닌 스택에 쌓임
+
+        static void Main(string[] args)
+        {
+
+            int x = 3, y = 4;
+
+            Console.WriteLine($"{x} {y}");    //result = 3, 4
+            Swap(ref x, ref y);               //result = 4, 3 //ref 가 내부적으로 값을 바꿔줌 x, y 와 a, b를 연결해줌.
+            Console.WriteLine($"{x} {y}");    //result = 4, 3
+
+        }
+    }
+}
+```
 
