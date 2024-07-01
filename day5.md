@@ -207,6 +207,79 @@ namespace ConsoleApp16
 }
 ```
 
+## 메소드를 이용하여 최대, 최솟값 구하기
+```
+using System.Numerics;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        // Q) 배열 요소값 중 가장 큰 값을 max로 대입 후 출력하라!
+        static void Main(string[] args)
+        {
+            int[] arr = { -7, 5, 60, -33, 42, -879 , 98};
+            int max = int.MinValue;
+            int min = int.MaxValue;
+
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > max)
+                {
+                    max = arr[i];
+                }
+                if(arr[i] < min)
+                {
+                    min = arr[i];
+                }
+            }
+
+            Console.WriteLine($"최댓값은 : {max}");
+            Console.WriteLine($"최솟값은 : {min}");
+        }
+    } 
+}
+```
+```
+using System.ComponentModel;
+using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
+
+namespace ConsoleApp16
+{
+    internal class Program
+    {
+        static int GetMax(int[] arr)
+        {
+            int max = int.MinValue;
+            for(int i = 0; i < arr.Length; i++)
+            {
+                if(arr[i] > max)
+                    max = arr[i];
+            }
+            return max;
+        }
+        static int GetMin(int[] arr)
+        {
+            int min = int.MaxValue;
+            for(int i = 0;i < arr.Length;i++)
+            {
+                if(arr[i] < min)
+                    min = arr[i];
+            }
+            return min;
+        }
+        // Q) 배열 요소값 중 가장 큰 값을 max로 대입 후 출력하라!
+        static void Main(string[] args)
+        {
+            int[] arr = { -7, 5, 60, -33, 42, -879, 98 };
+            Console.WriteLine($"최댓값은 : {GetMax(arr)}");
+            Console.WriteLine($"최솟값은 : {GetMin(arr)}");
+        }
+    } 
+}
+```
+
 
 
 
