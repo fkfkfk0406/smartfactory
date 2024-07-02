@@ -400,7 +400,7 @@ namespace ConsoleApp22
 }
 ```
 
-## 클래스 작성 연습 
+## [OOP SAMPLE] 클래스 작성 연습 
 ```
 class --> Cat, Dog, Person, Student, Shape, Car, Tiger, Lion ... ~~~
 
@@ -425,33 +425,52 @@ namespace ConsoleApp23
 
         public Cat()
         {
-            this.name = "뽀삐";
-            this.age = 3;
+            this.name = "Tom";
+            this.age = 15;
         }
+
         public Cat(string name)
         {
+            this.age = 15;
             this.name = name;
-            this.age = age;
+        }
+        public string Name(string Name)
+        {
+            this.name = name;
+            return "고양이 이름은 " + this.name + " 입니다.";
         }
         public string Name()
         {
             return "고양이 이름은 " + this.name + " 입니다.";
         }
+
         public string Age(int age)
         {
             this.age = age;
             return "고양이 나이는 " + this.age + "입니다.";
         }
+
+        public string Age()
+        {
+            return "고양이 나이는 " + this.age + "입니다.";
+        }
     }
+
     internal class Program
     {
         static void Main(string[] args)
         {
-
-            Cat tom = new Cat("JOHNSON");
+            Cat tom = new Cat();
             Console.WriteLine(tom.Name());
+            Console.WriteLine(tom.Age());
             Console.WriteLine(tom.Age(30));
 
+            Console.WriteLine();
+
+            Cat jerry = new Cat("Jerry");
+            Console.WriteLine(jerry.Name());
+            Console.WriteLine(jerry.Age());
+            Console.WriteLine(jerry.Age(18));
         }
     }
 }
