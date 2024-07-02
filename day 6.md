@@ -205,7 +205,254 @@ namespace ConsoleApp20
     }
 }
 ```
-재밌따
+재미따
 
 ***
 
+## 오후 퀴즈 !
+
+```
+﻿1. 1 ~ 100까지 홀수만 출력합니다. 
+
+
+
+2. 알파벳 A ~ Z / a ~ z 까지 출력합니다.
+
+
+
+3. 12와 18의 최대공약수(GCD)를 구해봅니다.
+
+
+
+4. 프로그램을 종료합니다.
+
+
+
+선택 : 1
+
+---------------------------------------
+
+1 3 5 7 9 .... 99
+
+---------------------------------------
+
+﻿1. 1 ~ 100까지 홀수만 출력합니다. 
+
+
+
+2. 알파벳 A ~ Z / a ~ z 까지 출력합니다.
+
+
+
+3. 12와 18의 최대공약수(GCD)를 구해봅니다.
+
+
+
+4. 프로그램을 종료합니다.
+
+
+
+선택 : 2
+
+-------------------------------------------
+
+A B C D ... Z
+
+a b c d ... z
+
+--------------------------------------------
+
+```
+
+## 풀이
+
+```
+using System.ComponentModel;
+using System.Security.Cryptography;
+
+namespace ConsoleApp21
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            do
+            {
+                Console.WriteLine("\n[  문  제  ]");
+                Console.WriteLine("1. 1 ~ 100까지 홀수만 출력합니다.");
+                Console.WriteLine("2. 알파벳 A ~ Z / a ~ z 까지 출력합니다.");
+                Console.WriteLine("3. 12와 18의 최대공약수(GCD)를 구해봅니다.");
+                Console.WriteLine("4. 프로그램을 종료합니다.");
+                Console.Write("선택 : ");
+                i = Int32.Parse(Console.ReadLine());
+
+                switch(i)
+                {
+                    case 1:
+                        for(int n = 0; n <= 100; n++)
+                        {
+                            if (n % 2 == 1)
+                                Console.Write($"{n++} ");
+                        }
+                        break;
+                    case 2:
+                        for(char ch = 'A'; ch <= 'Z'; ch++)
+                        {
+                            Console.Write($"{ch} ");
+                        }
+                        Console.WriteLine();
+                        for(char ch = 'a'; ch <= 'z'; ch++)
+                        {
+                            Console.Write($"{ch} ");
+                        }
+                        break;
+                    case 3:
+                        int n1 = 12;
+                        int n2 = 18;
+
+                        int gcd = getgcd(n1, n2);
+
+                        int getgcd(int a,int b)
+                        {
+                            if (a % b == 0)
+                                return b;
+                            else
+                            {
+                                return getgcd(b, a % b);
+                            }
+                        }
+                        Console.WriteLine($"12와 18의 최대공약수는 : {getgcd(n1, n2)} 입니다");
+                        break;
+                    case 4:
+                        Console.WriteLine("프로그램을 종료합니다.");
+                        break;
+                    default:
+                        Console.WriteLine("다시 입력하시오.");
+                        break;
+                }
+            }
+            while (i < 4);
+        }
+    }
+}
+```
+
+```
+최대 공약수를 구할 때 사용한건 "유클리드 호제법" ㄷ ㄷ ㄷ ㄷ
+```
+
+## 예제 실습 코드
+```
+namespace ConsoleApp22
+{
+    class Car
+    {
+        //멤버 변수
+        private int speed;
+        public String brand;
+        //생성자
+        public Car()
+        {
+            this.speed = 0;
+            this.brand = "Hyundai";
+        }
+
+        public Car(string brand)
+        {
+            this.speed = 100;
+            this.brand = brand;
+        }
+        //멤버 메소드
+        public string Run(int speed)
+        {
+            this.speed = speed;
+
+            return this.speed + "km 속도로 달립니다.";
+        }
+        public string Run()
+        {
+            return this.speed + " km 속도로 달립니다.";
+        }
+        public string ShowBrand()
+        {
+            return "제 브랜드 명은 " + this.brand + "입니다.";
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Car tony = new Car();
+            Console.WriteLine(tony.ShowBrand());
+            Console.WriteLine(tony.Run());
+            Console.WriteLine(tony.Run(80));
+
+            Car jack = new Car("제네시스");
+            Console.WriteLine(jack.ShowBrand());
+            //jack.speed = 500;
+            Console.WriteLine(jack.Run(500));
+            Console.WriteLine();
+
+        }
+    }
+}
+```
+
+## 클래스 작성 연습 
+```
+class --> Cat, Dog, Person, Student, Shape, Car, Tiger, Lion ... ~~~
+
+멤버 변수
+
+생성자
+
+멤버 메소드
+```
+
+## 풀이
+
+```
+using System.ComponentModel.DataAnnotations;
+
+namespace ConsoleApp23
+{
+    class Cat
+    {
+        private string name;
+        private int age;
+
+        public Cat()
+        {
+            this.name = "뽀삐";
+            this.age = 3;
+        }
+        public Cat(string name)
+        {
+            this.name = name;
+            this.age = age;
+        }
+        public string Name()
+        {
+            return "고양이 이름은 " + this.name + " 입니다.";
+        }
+        public string Age(int age)
+        {
+            this.age = age;
+            return "고양이 나이는 " + this.age + "입니다.";
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Cat tom = new Cat("JOHNSON");
+            Console.WriteLine(tom.Name());
+            Console.WriteLine(tom.Age(30));
+
+        }
+    }
+}
+```
