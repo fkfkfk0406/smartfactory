@@ -581,6 +581,36 @@ Ubuntu -> Cloud
 [DevOps]
 Docker
 Kubernetes
+```
 
+## DOCKER
+DOCKER 설치 후에 실습을 해보았다.
+
+```
+PS C:\Users\Admin> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED      SIZE
+ubuntu       22.04     8a3cdc4d1ad3   5 days ago   77.9MB
+PS C:\Users\Admin>
+PS C:\Users\Admin> docker run -it -p 80:80 8a3c /bin/bash
+root@dad26d7c4696:/#
+```
+
+## docker 에서 vi 를 이용하여 코딩작업
+```
+root@dad26d7c4696:~# vi hello.c
+root@dad26d7c4696:~# ls
+hello.c
+root@dad26d7c4696:~# cat hello.c
+#include<stdio.h>
+
+int main()
+{
+        printf("Hello World~~~!!!\n");
+        return 0;
+}
+root@dad26d7c4696:~# ./hello
+Hello World~~~!!!
+```
+-- docker를 사용해서 파일의 공간을 엄청 줄일수가 있따~~~!!!!! (너무 멋있다)
 
 
