@@ -493,6 +493,83 @@ namespace P133App
     }
 }
 ```
+## QUIZ!!!
+```
+﻿Q) Property 만들어 사용하기
+
+    Cat 
+
+    {
+
+        private string name;
+
+        private int age;
+
+        private string color;
+
+
+
+	public string ShowCatInfo()
+
+        {
+
+             // "야옹이"의 나이는 '7'살이고 색깔은 '하얀색' 입니다. 
+
+            return ~~~~~;
+
+        }
+
+
+
+     }
+
+    ===> Propery가 적용된 클래스로 만들어 주세요.
+
+--------------------------------------------------------------------------
+
+Cat cat = new Cat()
+
+//코딩
+
+cat.ShowCatInfo()
+```
+
+## 풀이
+
+```
+namespace QUIZ04
+{
+    class Cat
+    {
+        //private string name;
+        //private int age;
+        //private string color;
+
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Color { get; set; }
+        public string ShowCatInfo()
+        {
+            //"냐옹이"의 나이는 '7'살이고 색깔은 '하얀색' 입니다.
+            return $"{this.Name}의 나이는 {this.Age}살이고 색깔은 {this.Color}입니다.";
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Cat cat = new Cat();
+            cat.Name = "냐옹이";
+            cat.Age = 7;
+            cat.Color = "하얀색";
+
+            Console.WriteLine(cat.ShowCatInfo());
+        }
+    }
+}
+
+property를 작성하면 member는 생략해도됨.
+```
 
 
 
