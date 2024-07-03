@@ -313,6 +313,187 @@ namespace ConsoleApp27
     }
 }
 ```
+```
+namespace ConsoleApp28
+{
+    abstract class Mammal
+    {
+        public virtual void Eat() // 추상 메소드 abstract mothod
+        {
+            Console.WriteLine("먹습니다");
+        }
+    }
+    class Lion : Mammal
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("사자가 먹습니다.");
+        }
+    }
+    class Tiger : Mammal
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("호랑이가 먹습니다.");
+        }
+    }
+    class Dog : Mammal
+    {
+        public override void Eat()
+        {
+            Console.WriteLine("개가 먹습니다.");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Lion lion = new Lion();
+            Tiger tiger = new Tiger();
+            Dog dog = new Dog();
+
+            lion.Eat();
+            tiger.Eat();
+            dog.Eat();
+        }
+    }
+}
+```
+
+```
+namespace OOP06
+{
+    //멤버변수
+   
+    class Shape
+    {
+        private string color;
+        public string Color { get; set; } //property
+
+        public void SetColor(string color)
+        {
+            this.color = color;
+        }
+
+        public string GetColor()
+        {
+            return this.color;
+        }
+        public virtual void Draw()
+        {
+            Console.WriteLine("도형을 그리다");
+        }
+    }
+
+    class Circle : Shape
+    {
+        public override void Draw()
+        {
+            Console.WriteLine("원을 그리다");
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Circle circle = new Circle();
+
+            circle.SetColor("파란색");
+            Console.WriteLine(circle.GetColor());
+            circle.Color = "노란색";
+            Console.WriteLine(circle.Color);
+        }
+    }
+}
+```
+## getter / setter 실습
+```
+namespace propertyApp02
+{
+    class Person
+    {
+        //멤버 변수
+        private string name;
+        private int age;
+        public string Color { get; set; }
+
+        //Property
+
+        public string Name
+        {
+            set
+            {
+                name = value;
+            }
+            get
+            {
+                return name;
+            }
+        }
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                if(value >= 0)
+                {
+                    age = value;
+                }
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Person paul = new Person();
+            paul.Name = "폴이";
+            paul.Age = 23;
+
+            Console.WriteLine($"이름 : {paul.Name}, 나이: {paul.Age}");
+
+        }
+    }
+}
+```
+## 교재 예제 실습
+```
+namespace P133App
+{
+    class Circle
+    {
+        private double pi = 3.14;
+
+        public double Pi
+        {
+            get
+            {
+                return pi;
+            }
+            set
+            {
+                pi = value;
+            }
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Circle o = new Circle();
+            o.Pi = 3.14159;         //write property
+
+            double piValue = o.Pi; //read property
+        }
+    }
+}
+```
+
 
 
 
