@@ -571,6 +571,16 @@ namespace QUIZ04
 property를 작성하면 member는 생략해도됨.
 ```
 
+***
+
+```
+[OpenSource]
+Linux --> Cloud
+Ubuntu -> Cloud
+
+[DevOps]
+Docker
+Kubernetes
 
 
 
