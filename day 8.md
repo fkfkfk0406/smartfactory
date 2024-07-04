@@ -192,3 +192,255 @@ namespace OOPPraactice01
     }
 }
 ```
+***
+## 인터페이스의 사용
+## 예제 코드
+```
+namespace interfaceOOP
+{
+
+    //다중상속
+    //유니콘~~~! 날개가 있는 말~~~!!
+    class Horse
+    {
+        public void Run()
+        {
+            Console.WriteLine("말이 달립니다.");
+        }
+    }
+
+    class Angel { }
+
+    interface IWing //abstract 클래스에서 영향을 받음, interface = 상속이아니라 구현 이라고함
+    {
+        public void Fly(); //abstract method에서 영향을 받음
+
+    }
+
+    interface IWing2
+    {
+        public void Fly();
+    }
+
+    class Unicon : Horse, IWing
+    {
+        //interface의 메소드 구현
+        public void Fly()
+        {
+            Console.WriteLine("유니콘이 날고 있습니다.");
+        }
+        //유니콘의 멤버메소드
+        public void PerformMagic()
+        {
+            Console.WriteLine("유니콘이 마법을 사용합니다.");
+        }
+    }
+
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Unicon jack = new Unicon();
+            jack.Fly();
+            jack.Run();
+            jack.PerformMagic();
+
+        }
+    }
+}
+```
+### 인터페이스 연습
+```
+using System.Security.Cryptography;
+
+
+
+namespace InterfaceApp02
+
+{
+
+    //다중상속
+
+    //치킨
+
+
+
+    class Chicken
+
+    {
+
+        public void fried()
+
+        {
+
+            Console.WriteLine("기본 맛입니다");
+
+        }
+
+    }
+
+    
+
+    interface ISpice
+
+    {
+
+        public void soy();
+
+        public void spicy();
+
+        public void garlic();
+
+    }
+
+
+
+    class SoyChicken : Chicken, ISpice
+
+    {
+
+        public void soy()
+
+        {
+
+            Console.WriteLine("치킨이 간장 맛입니다.");
+
+        }
+
+        public void spicysoy()
+
+        {
+
+            Console.WriteLine("치킨이 매운 간장 맛입니다.");
+
+        }
+
+        public void spicy()
+
+        {
+
+            Console.WriteLine("치킨이 양념 맛입니다.");
+
+        }
+
+        public void garlic()
+
+        {
+
+            Console.WriteLine("치킨이 마늘 맛입니다.");
+
+        }
+
+    }
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            SoyChicken nene = new SoyChicken();
+
+            nene.fried();
+
+            nene.soy();
+
+            nene.spicysoy();
+
+            nene.spicy();
+
+            nene.garlic();
+
+        }
+
+    }
+
+}
+
+치킨 맛있겠다.
+```
+
+***
+
+## 오후 코딩 퀴즈
+```
+완전수란 자신을 제외한 약수의 합이 자신이 되는 수를 완전수라고 합니다. 6은 완전수입니다.
+
+6의 약수는 1 2 3 6 이 중 자신을 제외한 약수의 합 1 + 2 + 3 = 6 즉, 6은 완전수입니다.
+
+1000 이하의 완전수를 입력 받아 yes, no로 표현해 주세요.
+
+
+
+----------------------------------------
+
+6
+
+yes
+
+8
+
+no
+```
+
+## 풀이
+
+```
+namespace ConsoleApp30
+
+{
+
+    internal class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+
+
+            int n = Int32.Parse(Console.ReadLine());
+
+            int result = 0;
+
+
+
+            for(int i = 1; i < n; i++)
+
+            {
+
+                if(n % i == 0)
+
+                result += i;
+
+            }
+
+            if(result == n)
+
+            {
+
+                Console.WriteLine("yes");
+
+            }
+
+            else
+
+            {
+
+                Console.WriteLine("no");
+
+            }
+
+        }
+
+    }
+
+}
+```
+
