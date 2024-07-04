@@ -261,105 +261,53 @@ using System.Security.Cryptography;
 namespace InterfaceApp02
 
 {
-
     //다중상속
-
     //치킨
 
-
-
     class Chicken
-
     {
-
         public void fried()
-
         {
-
             Console.WriteLine("기본 맛입니다");
-
         }
-
     }
-
-    
-
     interface ISpice
-
     {
-
         public void soy();
-
         public void spicy();
-
         public void garlic();
-
     }
-
-
-
     class SoyChicken : Chicken, ISpice
-
     {
-
         public void soy()
-
         {
-
             Console.WriteLine("치킨이 간장 맛입니다.");
-
         }
-
         public void spicysoy()
-
         {
-
             Console.WriteLine("치킨이 매운 간장 맛입니다.");
-
         }
-
         public void spicy()
-
         {
-
             Console.WriteLine("치킨이 양념 맛입니다.");
-
         }
-
         public void garlic()
-
         {
-
             Console.WriteLine("치킨이 마늘 맛입니다.");
-
         }
-
     }
-
     class Program
-
     {
-
         static void Main(string[] args)
-
         {
-
             SoyChicken nene = new SoyChicken();
-
             nene.fried();
-
             nene.soy();
-
             nene.spicysoy();
-
             nene.spicy();
-
             nene.garlic();
-
         }
-
     }
-
 }
 
 치킨 맛있겠다.
@@ -392,55 +340,132 @@ no
 
 ```
 namespace ConsoleApp30
-
 {
-
     internal class Program
-
     {
-
         static void Main(string[] args)
-
         {
-
-
-
             int n = Int32.Parse(Console.ReadLine());
-
             int result = 0;
-
-
-
             for(int i = 1; i < n; i++)
-
             {
-
                 if(n % i == 0)
-
                 result += i;
-
             }
-
             if(result == n)
-
             {
-
                 Console.WriteLine("yes");
-
             }
-
             else
-
             {
-
                 Console.WriteLine("no");
-
             }
-
         }
-
     }
-
 }
 ```
+
+## 퀴즈 2
+```
+프로그램 명: prime
+제한시간: 1 초
+1 보다 큰 정수 N 가 1 과 N 자신 이외의 양의 약수를 가지지 않을 때의 N 을 소수라고 부른다.
+이를테면, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31 등은 모두 소수이다.
+4, 6, 16 등과 같이 소수가 아니면서 2 이상인 자연수를 합성수라고 정의하며,
+1 은 소수도 아니고 합성수도 아닌 수이다.
+
+
+1 ~ 100 사이의 소수를 구하라
+
+--------------------------------------------------------------------------------------------------
+
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+```
+
+## 풀이
+```
+using System;
+
+namespace ConsoleApp32
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // 소수인지 판별할 때 사용할 변수 초기화
+            int answer = 0;
+            
+            // 2부터 99까지의 수를 확인합니다.
+            for (int i = 2; i < 100; i++)
+            {
+                // 2부터 i-1까지의 수로 i를 나눠 봅니다.
+                for (int j = 2; j < i; j++)
+                {
+                    // i가 j로 나누어 떨어지면 소수가 아닙니다.
+                    if (i % j == 0)
+                    {
+                        // answer를 증가시키고 루프를 종료합니다.
+                        answer++;
+                        break;
+                    }
+                }
+
+                // answer가 0이면 소수입니다.
+                if (answer == 0)
+                {
+                    // 소수를 출력합니다.
+                    Console.WriteLine($"{i} ");
+                }
+                
+                // 다음 수를 확인하기 위해 answer를 0으로 초기화합니다.
+                answer = 0;
+            }
+        }
+    }
+}
+
+```
+```
+부울을 사용해 보았다.
+using System;
+using System.Diagnostics.CodeAnalysis;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace ConsoleApp32
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            bool flag = false;
+
+            int answer = 0;
+            for (int i = 2; i < 100; i++)
+            {
+                for (int j = 2; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag == false)
+                {
+                    Console.Write($"{i} ");
+                }
+                flag = false;
+            }
+        }
+    }
+}
+```
+
+수학이 약해서인지 이런문제는 생각하는데부터 오래 걸린다 ㅜㅜ
+어렵다 슬슬 더 어려워질것이다.
+
+***
+
+
+
 
