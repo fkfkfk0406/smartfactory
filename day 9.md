@@ -411,4 +411,93 @@ namespace ConsoleApp35
 
 ***
 
+## quiz
+```
+﻿문자열을 입력하세요 : ﻿123%$#ABCDxyz 
+
+알파벳 대문자 : 4
+
+
+알파벳 소문자 : 3
+
+
+숫자 : 3
+
+
+특수문자 3
+
+
+
+
+
+
+힌트) ASCII 코드를 생각하세요.
+```
+## 풀이
+```
+namespace ConsoleApp35
+
+{
+
+    internal class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            //1.문자열 입력받기
+
+            Console.Write("문자열을 입력하세요 : ");
+
+            string input = Console.ReadLine();
+
+            //2. 변수 카운트변수 4개
+
+            int bigCnt = 0;
+
+            int smallCnt = 0;
+
+            int numberCnt = 0;
+
+            int specialCnt = 0;
+
+            //3. 카운팅
+
+            for(int i = 0; i < input.Length; i++)
+
+            {
+
+                if (input[i] >= 'A' && input[i] <= 'Z')
+
+                    bigCnt++;
+
+                else if (input[i] >= 'a' && input[i] <= 'z')
+
+                    smallCnt++;
+
+                else if (input[i] >= '0' && input[i] <= '9')
+
+                    numberCnt++;
+
+                else specialCnt++;
+
+            }
+
+            Console.WriteLine($"알파벳 대문자 : {bigCnt}");
+
+            Console.WriteLine($"알파벳 소문자 : {smallCnt}");
+
+            Console.WriteLine($"숫자 : {numberCnt}");
+
+            Console.WriteLine($"특수문자 : {specialCnt}");
+
+        }
+
+    }
+
+}
+```
+
 
