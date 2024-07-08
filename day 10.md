@@ -3,7 +3,7 @@
 ***
 
 ## 오후 진도
-## OOP
+## OOP 복습
 ```
 using System;
 using System.Collections.Generic;
