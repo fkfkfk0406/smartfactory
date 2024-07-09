@@ -394,3 +394,37 @@ namespace WinFormsApp2
 
 ![test 2](https://github.com/fkfkfk0406/smartfactory/assets/91593653/4c6d4720-1683-424f-837a-b89d52e98ab2)
 
+## 예제 2
+```
+namespace WinFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox1.Text + "님 소프트웨어공학과에 들어온 것을 환영합니다.";
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+    }
+}
+```
+## 실행결과
+
+![test3](https://github.com/fkfkfk0406/smartfactory/assets/91593653/a579bd42-33fa-40cc-bd0a-bbfa8b8f73fe)
+
+![test 4](https://github.com/fkfkfk0406/smartfactory/assets/91593653/d0cbf254-85d6-4dae-bcd8-2516e44db897)
+
+
+
