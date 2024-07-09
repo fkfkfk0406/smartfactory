@@ -422,9 +422,60 @@ namespace WinFormsApp3
 ```
 ## 실행결과
 
+컴파일 했을 때
 ![test3](https://github.com/fkfkfk0406/smartfactory/assets/91593653/a579bd42-33fa-40cc-bd0a-bbfa8b8f73fe)
 
+출력 버튼을 눌렀을 때
 ![test 4](https://github.com/fkfkfk0406/smartfactory/assets/91593653/d0cbf254-85d6-4dae-bcd8-2516e44db897)
+
+## 교제 예제
+## 1번 풀이
+```
+namespace test1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = textBox1.Text + "님~~! 당신의 학번은 " + textBox2.Text + " 입니다~!!";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}
+```
+## 실행결과
+
+컴파일 결과
+![text 5](https://github.com/fkfkfk0406/smartfactory/assets/91593653/e190b824-c0d1-496c-9cbf-c16456a4a452)
+
+
+출력 결과
+![test 6 ](https://github.com/fkfkfk0406/smartfactory/assets/91593653/53322f12-c7ce-45bb-89bb-e0c016c7a3a9)
+***
 
 
 
