@@ -593,10 +593,23 @@ A) Multiline
 ```
 6번) TextBox에 글자들을 여러 줄로 입력하시오.
 A)
-
-![test 12](https://github.com/fkfkfk0406/smartfactory/assets/91593653/f0f09ea4-7244-4320-8385-a24ee45290ab)
 ```
 
+![test 12](https://github.com/fkfkfk0406/smartfactory/assets/91593653/f0f09ea4-7244-4320-8385-a24ee45290ab)
 
+
+```
+7번) Button, Label, TextBox의 글자 크기를 동시에 조정할 수 있는가?
+A) 디자인 화면에서 드래그 후 Font의 글자크기를 조정하면 됨.
+```
+
+```
+8번) Button 에서 사진을 표시하려면 어떤 속성을 이용해야 하는지 실제로 표시하시오.
+A)
+```
+
+![image](https://github.com/fkfkfk0406/smartfactory/assets/91593653/12bd41de-1a02-4183-b2dd-ba275c28e525)
+
+***
 
 
