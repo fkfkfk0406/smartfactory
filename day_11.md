@@ -470,12 +470,133 @@ namespace test1
 ## 실행결과
 
 컴파일 결과
+
 ![text 5](https://github.com/fkfkfk0406/smartfactory/assets/91593653/e190b824-c0d1-496c-9cbf-c16456a4a452)
 
 
 출력 결과
+
 ![test 6 ](https://github.com/fkfkfk0406/smartfactory/assets/91593653/53322f12-c7ce-45bb-89bb-e0c016c7a3a9)
-***
+
+## 2번 풀이
+```
+namespace test1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(textBox1.Text + "님~~! 당신의 학번은 " + textBox2.Text + " 입니다~!!");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+```
+## 실행결과
+컴파일 결과
+
+![test 7](https://github.com/fkfkfk0406/smartfactory/assets/91593653/ef7c0fe9-14e4-4493-9288-bac834118d2b)
+
+
+실행 결과
+
+![test 8](https://github.com/fkfkfk0406/smartfactory/assets/91593653/103de619-145e-4f43-8107-e37934834879)
+
+## 3번 풀이
+```
+namespace test1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox3.Text = textBox1.Text + "님~~! " + Environment.NewLine + "당신의 학번은 " + Convert.ToChar(13) + Convert.ToChar(10) + textBox2.Text + Environment.NewLine + "입니다^^";
+            MessageBox.Show(textBox1.Text + "님~~! " + "\r\n" + "당신의 학번은" + "\r\n" + textBox2.Text + "\r\n" + "입니다!!", "\" " + "확인 사항" + Convert.ToChar(34));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+    }
+}
+```
+## 실행 결과
+
+컴파일 결과
+
+![test 9](https://github.com/fkfkfk0406/smartfactory/assets/91593653/a0eda6ee-3cbf-4d76-a0f1-eb89b3318315)
+
+
+실행 결과
+
+![text 10](https://github.com/fkfkfk0406/smartfactory/assets/91593653/68a242ba-98f3-495e-807c-4cd6f872cf72)
+
+## 4~5번 풀이
+```
+4번) TextBox의 색깔을 변경 하려면 속성 중에 어느 것을 설정해야 하는가?
+A) BackColor
+```
+```
+5번) TextBox에 글자들이 여러 줄로 표시되도록 하려면 속성 중에 어느 것을 설정해야 하는가?
+A) Multiline
+```
+```
+6번) TextBox에 글자들을 여러 줄로 입력하시오.
+A)
+
+![test 12](https://github.com/fkfkfk0406/smartfactory/assets/91593653/f0f09ea4-7244-4320-8385-a24ee45290ab)
+```
+
 
 
 
