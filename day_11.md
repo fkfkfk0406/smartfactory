@@ -384,10 +384,13 @@ namespace WinFormsApp2
 }
 ```
 ## 실행 결과
-```
+
 컴파일했을때
+
 ![test 1](https://github.com/fkfkfk0406/smartfactory/assets/91593653/50484ec4-62d4-4b5c-a9e7-e55e41194705)
 
+
 버튼 1을 눌렀을때
+
 ![test 2](https://github.com/fkfkfk0406/smartfactory/assets/91593653/4c6d4720-1683-424f-837a-b89d52e98ab2)
-```
+
