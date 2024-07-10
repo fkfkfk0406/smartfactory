@@ -398,6 +398,7 @@ namespace Code100
 ```
 
 ## WINDOW FORM 실습 ~~~!!!!!
+
 ```
 namespace P50Exam01
 {
@@ -464,6 +465,9 @@ namespace P50Exam01
     }
 }
 ```
+
+***
+
 ## 실행결과
 
 ![test 13](https://github.com/fkfkfk0406/smartfactory/assets/91593653/86415125-5fa5-447e-90ff-74b8163d6a51)
