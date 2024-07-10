@@ -219,7 +219,7 @@ namespace Code89
     }
 }
 ```
-## (index) this 문법 사용
+## (indexer) this 문법 사용
 ```
 namespace IndexerTest
 {
@@ -348,6 +348,57 @@ namespace IndexerApp02
 -- 배열에서 데이터가 저장되는 위치(주소)를 가리키는 변수를 인덱스(index)라고 부르는데 비해,
 인덱서(indexer)는 특별한 종류의 프로퍼티를 부르는 이름이다.
 ```
+## enum
+```
+namespace Code99
+{
+    enum Days { Sun=2, Mon, Tue, Wed=8, Thu, Fri, Sat }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine((int)Days.Sun);
+            Console.WriteLine((int)Days.Mon);
+            Console.WriteLine((int)Days.Tue);
+            Console.WriteLine((int)Days.Wed);
+            Console.WriteLine((int)Days.Thu);
+            Console.WriteLine((int)Days.Fri);
+            Console.WriteLine(Days.Sat);
+
+        }
+    }
+}
+```
+```
+namespace Code100
+{
+    enum TrafficLights { GREEN, RED, YELLOW };
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //주소를 통한 접근
+            for (int i = 0; i < 3; i++)
+            {
+
+                Console.WriteLine((TrafficLights)i);
+            }
+            //인스턴스(객체)를 통한 접근
+            TrafficLights r = TrafficLights.RED;
+            TrafficLights g = TrafficLights.GREEN;
+            TrafficLights y = TrafficLights.YELLOW;
+            Console.WriteLine(r);
+            Console.WriteLine(g);
+            Console.WriteLine(y);
+        }
+    }
+}
+```
+```
+
+
 
 
 
