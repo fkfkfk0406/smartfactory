@@ -475,9 +475,48 @@ namespace P50Exam01
 ![test 13](https://github.com/fkfkfk0406/smartfactory/assets/91593653/86415125-5fa5-447e-90ff-74b8163d6a51)
 
 
+## 연습 2
+```
+namespace WinFormsApp4
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox2.Items.Add("서울 특별시");
+            comboBox2.Items.Add("인청 광영시");
+            comboBox2.Items.Add("대전 광역시");
+            comboBox2.Items.Add("대구 광역시");
+            comboBox2.Items.Add("부산 광역시");
+            comboBox2.Items.Add("광주 광역시");
+            comboBox2.Items.Add("울산 광역시");
+
+            comboBox2.Items.Add("경기도");
+            comboBox2.Items.Add("경상도");
+            comboBox2.Items.Add("전라도");
+            comboBox2.Items.Add("충청도");
+            comboBox2.Items.Add("강원도");
+            comboBox2.Items.Add("제주도");
+
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 8;
+        }
+    }
+}
+```
+
+## 실행결과
+
+![test 14](https://github.com/fkfkfk0406/smartfactory/assets/91593653/91ab1f92-e4a2-4444-9895-9846e659e6e8)
 
 
-
-
-
-
+***
