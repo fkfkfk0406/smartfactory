@@ -525,3 +525,92 @@ namespace P59ListBoxApp
 
 ***
 
+## 윈폼 실습 2222@@@@
+
+```
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace P59WINFORMAPP
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = textBox1.Text.Substring(0, 3);
+            textBox3.Text = textBox1.Text.Substring(textBox1.Text.Length - 3, 3);
+            textBox4.Text = textBox1.Text.Substring(5, 3);
+            textBox5.Text = textBox1.TextLength.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            textBox1.Focus();
+        }
+    }
+}
+```
+
+## 실행결과 
+
+![화면 캡처 2024-07-11 162106](https://github.com/fkfkfk0406/smartfactory/assets/91593653/9988f7fd-fb77-4c70-88f5-d059f4f4ddbe)
+
+***
+
+## 예제 333
+```
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int a = int.Parse(tbValue1.Text);
+            int b = int.Parse(tbValue2.Text);
+            int result = a + b;
+
+            tbResult.Text = result.ToString(); //정수 -> 문자로
+
+        }
+    }
+}
+```
+## 실행 결과
+
+![화면 캡처 2024-07-11 163502](https://github.com/fkfkfk0406/smartfactory/assets/91593653/1d087f2e-cbb7-40ea-9c69-39cb52f9bc31)
+
+
