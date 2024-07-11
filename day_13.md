@@ -407,3 +407,121 @@ namespace DelegateApp02
     }
 }
 ```
+## WINFORM 어제 하던거 다듬기
+```
+using System.Text;
+
+namespace P50Exam01
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("당신의 연령은");
+            if (radioButton1.Checked == true)
+                sb.AppendLine(radioButton1.Text);
+            if (radioButton2.Checked == true)
+                sb.AppendLine(radioButton2.Text);
+            if (radioButton3.Checked == true)
+                sb.AppendLine(radioButton3.Text);
+            if (radioButton4.Checked == true)
+                sb.AppendLine(radioButton4.Text);
+            if (radioButton5.Checked == true)
+                sb.AppendLine(radioButton5.Text);
+            if (radioButton6.Checked == true)
+                sb.AppendLine(radioButton6.Text);
+
+
+            sb.AppendLine("\n좋아하는 색은");
+
+            if (checkBox1.Checked == true)
+                sb.AppendLine(checkBox1.Text);
+            if (checkBox2.Checked == true)
+                sb.AppendLine(checkBox2.Text);
+            if (checkBox3.Checked == true)
+                sb.AppendLine(checkBox3.Text);
+            if (checkBox4.Checked == true)
+                sb.AppendLine(checkBox4.Text);
+            if (checkBox5.Checked == true)
+                sb.AppendLine(checkBox5.Text);
+            if (checkBox6.Checked == true)
+                sb.AppendLine(checkBox6.Text);
+
+
+
+            sb.Append("입니다.");
+            label1.Text = sb.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+    }
+}
+```
+## P59 예제 실습 및 퀴즈 
+```
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace P59ListBoxApp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            listBox1.Items.Add("경상북도");
+            listBox1.Items.Add("경상남도");
+            listBox1.Items.Add("강원도");
+            listBox1.Items.Add("서울특별시");
+            listBox1.Items.Add("인천광역시");
+            listBox1.Items.Add("부산광역시");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(textBox1.Text);
+            textBox1.Text = "";
+            textBox1.Focus();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add(listBox1.Text);
+            listBox1.Items.Remove(listBox1.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(listBox2.Text);
+            listBox2.Items.Remove(listBox2.Text);
+            
+        }
+    }
+}
+```
+## 실행결과
+
+![test 59_!](https://github.com/fkfkfk0406/smartfactory/assets/91593653/c84ac393-50ac-4c87-9e19-885d8897140f)
+
+***
+
