@@ -325,3 +325,85 @@ namespace ConsoleApp53
 }
 ```
 ***
+## Delegate
+```
+namespace ConsoleApp54
+{
+    //Delegate
+    //Code119
+
+    internal class Program
+    {
+        //Delegate 선언
+        delegate void PrintDelegate(string str);
+
+        class Print
+        {
+            public void PrintOut(string str)
+            {
+                Console.WriteLine(str);
+            }
+        }
+        static void Main(string[] args)
+        {
+            Print p = new Print();
+            p.PrintOut("Hellow World~!!!");
+            PrintDelegate pdg = p.PrintOut;
+            pdg("안녕하세이요");
+        }
+    }
+}
+```
+```
+namespace DelegateApp02
+{
+    internal class Program
+    {
+        public delegate int Compute(int a, int b);
+        class Calculator
+        {
+            public int Plus(int a, int b)
+            {
+
+                return a + b;
+            }
+            public int Minus(int a, int b)
+            {
+
+                return a - b;
+            }
+            public int Multiple(int a, int b)
+            {
+                return a * b;
+            }
+            public double Devide(int a, int b)
+            {
+                return (double)a / b; 
+            }
+        }
+        static void Main(string[] args)
+        { 
+            
+
+            int a = 100;
+            int b = 200;
+
+            Calculator cal = new Calculator();
+            //Compute compute = cal.Plus;
+
+            Func<int, int, int> intCompute = cal.Plus;
+            Console.WriteLine("덧셈 : {0}", intCompute(a, b));
+
+            intCompute = cal.Minus;
+            Console.WriteLine("뺄셈 : {0}", intCompute(a, b));
+        
+            intCompute = cal.Multiple;
+            Console.WriteLine("곱셈 : {0}",intCompute(a, b));
+
+            Func<int, int, double> doubleCompute = cal.Devide;
+            doubleCompute = cal.Devide;
+            Console.WriteLine("나눗셈 : {0}", doubleCompute(a, b));
+        }
+    }
+}
+```
