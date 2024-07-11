@@ -202,4 +202,126 @@ namespace ConsoleApp51
 
 ***
 
+## 인터페이스 실습
+```
+namespace ConsoleApp52
+{
+    interface IMaker
+    {
+        void MadWhere();
+        void WareHouse();
+    }
+    class Korea : IMaker
+    {
+        public void MadWhere()
+        {
+            Console.WriteLine("국산 입니다.");
+        }
 
+        public void WareHouse()
+        {
+            Console.WriteLine("상품 등록 완료");
+        }
+    }
+    class China : IMaker
+    {
+        public void MadWhere()
+        {
+            Console.WriteLine("중국산 입니다.");
+        }
+
+        public void WareHouse()
+        {
+            Console.WriteLine("상품 등록 완료");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            IMaker m = new Korea();
+            m.MadWhere();
+            m.WareHouse();
+
+            m = new China();
+            m.MadWhere();
+            m.WareHouse();
+        }
+    }
+}
+```
+```
+namespace interfacetest2
+{
+    interface IMaker
+    {
+        void MadeWhere();
+    }
+    interface IOwner
+    {
+        void WhoOwns();
+    }
+    class Korea : IMaker, IOwner
+    {
+        public void MadeWhere()
+        {
+            Console.WriteLine("국산 입니다.");
+        }
+
+        public void WhoOwns()
+        {
+            Console.WriteLine("대한민국 회사 제품입니다.");
+        }
+    }
+
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            IMaker km = new Korea();
+            km.MadeWhere();
+            //km.WhoOwns(); <-- 안보임
+            IOwner ko = new Korea();
+            //ko.MadeWhere(); <-- 안보임
+            ko.WhoOwns();
+
+            object obj = new Korea();
+            //obj.MadeWhere(); //Access 불가 !!
+            //obj.WhoOwns();    //Access 불가 !!
+
+            Korea korea = new Korea();
+            korea.MadeWhere();
+            korea.WhoOwns();
+        }
+    }
+}
+```
+***
+## 구조체 ~~~!!!
+```
+namespace ConsoleApp53
+{
+    struct School
+    {
+        public string schName;
+        public string stName;
+        public int stGrade;
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            School sc;
+            sc.schName = "리버사이드 고등학교";
+
+            Console.WriteLine(sc.schName);
+
+        }
+    }
+}
+```
+***
