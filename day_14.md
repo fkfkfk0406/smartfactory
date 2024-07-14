@@ -290,5 +290,148 @@ ADDR_ID  NAME         HP
 
 ## 풀이
 ```
+using System.Security.Cryptography;
+
+namespace ListQuiz2
+{
+    class AdressBook
+    {
+        //ID
+        public int Id { get; set; }
+        //Name
+        public string Name { get; set; }
+        //Hp
+        public string Hp { get; set; }
+    }
+    class ADDRBOOK : AdressBook
+    {
+        public ADDRBOOK() { }
+        public ADDRBOOK(int id, string name, string hp)
+        {
+            Id = id;
+            Name = name;
+            Hp = hp;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<AdressBook> addressBook = new List<AdressBook>();
+            int choice = 0;
+
+            do
+            {
+                Console.WriteLine("1. 데이터 삽입");
+                Console.WriteLine("2. 데이터 삭제");
+                Console.WriteLine("3. 데이터 조회");
+                Console.WriteLine("4. 데이터 수정");
+                Console.WriteLine("5. 종료");
+                Console.Write("메뉴 : ");
+                choice = Int32.Parse(Console.ReadLine());
+
+
+                switch (choice)
+                {
+                    case 1:
+                        AdressBook ab = new AdressBook();
+                        Console.Write("\nID를 입력 해 주세요 : ");
+                        ab.Id = Int32.Parse(Console.ReadLine());
+                        Console.Write("이름을 입력 해 주세요 : ");
+                        ab.Name = Console.ReadLine();
+                        Console.Write("전화번호를 입력 해 주세요 : ");
+                        ab.Hp = Console.ReadLine();
+                        addressBook.Add(ab);
+                        Console.WriteLine("\n데이터가 정상적으로 입력되었습니다.\n");
+                        break;
+                    case 2:
+                        Console.WriteLine("\n삭제 할 데이터를 선택하시오.");
+                        int delete = Int32.Parse(Console.ReadLine());
+                        for(int i = 0; i < addressBook.Count; i++)
+                        {
+                            if(addressBook[i].Id == delete)
+                            {
+                                addressBook.RemoveAt(i);
+                            }
+                        }
+                        Console.WriteLine("\n데이터가 정상적으로 삭제 되었습니다.\n");
+                        break;
+                    case 3:
+                        Console.Write("\nADDR_ID         NAME            HP\n");
+                        foreach (AdressBook address in addressBook)
+                        {
+                            
+                            Console.WriteLine($"{address.Id}              {address.Name}      {address.Hp}");
+                        }
+                        Console.WriteLine();
+                        break;
+                    case 4:
+                        Console.WriteLine("\n수정 할 데이터를 선택 하시오");
+                        int update = Int32.Parse(Console.ReadLine());
+                        for (int i = 0; i < addressBook.Count; i++)
+                        {
+                            if (addressBook[i].Id == update)
+                            {
+                                Console.Write("\n수정 할 ID를 입력 해 주세요 : ");
+                                addressBook[i].Id = Int32.Parse(Console.ReadLine());
+                                Console.Write("수정 할 이름을 입력 해 주세요 : ");
+                                addressBook[i].Name = Console.ReadLine();
+                                Console.Write("수정 할 전화번호를 입력 해 주세요 : ");
+                                addressBook[i].Hp = Console.ReadLine();
+                            }
+                        }
+                        Console.WriteLine("\n 데이터가 정상적으로 수정 되었습니다.\n");
+
+                        break;
+                    case 5:
+                        Console.WriteLine("\n프로그램 종료");
+                        break;
+                    default:
+                        Console.WriteLine("다시 입력하세요\n");
+                        break;
+                }
+            }
+            while (choice != 5);
+        }
+    }
+}
+```
+
+## QUIZ 3
+```
+﻿유로2024 나라별 팀도 좋고
+
+
+
+K리그도 좋습니다.
+
+
+
+축구팀에 해당하는 클래스를 만들고 해당 멤버로 사용할 데이터 후보
+
+
+
+5가지를 정한 다음 클래스를 만들고 다음과 같이 만들어 주세요.
+
+
+
+1. 클럽 선수 삽입
+
+2. 클럽 선수 삭제
+
+3. 클럽 선수 조회
+
+4. 클럽 선수 수정
+
+5. 프로그램 종료
+
+
+
+메뉴 : ____
+```
+
+## 풀이
+```
 
 ```
