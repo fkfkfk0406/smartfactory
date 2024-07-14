@@ -433,5 +433,106 @@ K리그도 좋습니다.
 
 ## 풀이
 ```
+namespace LISTQUIZ3
+{
+    class SquadMaker
+    {
+        public int number { get; set; }
+        public string name { get; set; }
+        public string position { get; set; }
+        public string country { get; set; }
+        public int age { get; set; }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<SquadMaker> squad = new List<SquadMaker>();
+            int choice = 0;
+
+            do
+            {
+                Console.WriteLine("----------스쿼드 메이커----------");
+                Console.WriteLine("1. 스쿼드에 선수 추가");
+                Console.WriteLine("2. 스쿼드에 선수 삭제");
+                Console.WriteLine("3. 스쿼드 조회");
+                Console.WriteLine("4. 스쿼드 수정");
+                Console.WriteLine("5. 프로그램 종료");
+                Console.Write("메뉴 : ");
+                choice = Int32.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        SquadMaker team = new SquadMaker();
+                        Console.Write("\n선수 번호를 입력하시오 : ");
+                        team.number = Int32.Parse(Console.ReadLine());
+                        Console.Write("선수 이름을 입력하시오 : ");
+                        team.name = Console.ReadLine();
+                        Console.Write("선수 포지션을 입력하시오 : ");
+                        team.position = Console.ReadLine();
+                        Console.Write("선수 국적을 입력하시오 : ");
+                        team.country = Console.ReadLine();
+                        Console.Write("선수 나이를 입력하시오 : ");
+                        team.age = Int32.Parse(Console.ReadLine());
+                        Console.WriteLine("\n선수가 정상적으로 추가되었습니다.\n");
+                        squad.Add(team);
+                        break;
+                    case 2:
+                        Console.WriteLine("\n스쿼드에서 삭제 할 선수의 등번호를 입력하시오");
+                        Console.Write("선택 : ");
+                        int delete = Int32.Parse(Console.ReadLine());
+                        for(int i = 0; i < squad.Count; i++)
+                        {
+                            if(squad[i].number == delete)
+                            {
+                                squad.RemoveAt(i);
+                            }
+                        }
+                        Console.WriteLine("\n선수가 정상적으로 삭제되었습니다.\n");
+                        break;
+                    case 3:
+                        Console.Write("\n 등번호    이름      포지션    국적     나이 \n");
+                        foreach(SquadMaker player in squad)
+                        { 
+                            Console.WriteLine($"   {player.number}      {player.name}      {player.position}     {player.country}   {player.age} ");
+                        }
+                        Console.WriteLine();
+                        break;
+                    case 4:
+                        Console.WriteLine("\n수정 할 선수의 등번호를 선택 하시오");
+                        Console.Write("선택 : ");
+                        int update = Int32.Parse(Console.ReadLine());
+                        for (int i = 0; i < squad.Count; i++)
+                        {
+                            if( squad[i].number == update)
+                            {
+                                Console.Write("\n수정 할 등번호를 입력해주세요 : ");
+                                squad[i].number = Int32.Parse(Console.ReadLine());
+                                Console.Write("수정 할 이름을 입력해주세요 : ");
+                                squad[i].name = Console.ReadLine();
+                                Console.Write("수정 할 포지션을 입력해주세요 : ");
+                                squad[i].position = Console.ReadLine();
+                                Console.Write("수정 할 국적을 입력해주세요 : ");
+                                squad[i].country = Console.ReadLine();
+                                Console.Write("수정 할 나이를 입력해주세요 : ");
+                                squad[i].age = Int32.Parse(Console.ReadLine());
+                            }
+                        }
+                        Console.WriteLine("\n선수가 정상적으로 수정 되었습니다.\n");
+                        break;
+                    case 5:
+                        Console.WriteLine("\n프로그램 종료");
+                        break;
+                    default:
+                        Console.WriteLine("숫자를 다시 입력하시오\n");
+                        break;
+                }
+            }
+            while (choice != 5);
+        }
+    }
+}
 
 ```
