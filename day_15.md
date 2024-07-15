@@ -412,7 +412,10 @@ namespace WinFormOddEvEN
 
 ![화면 캡처 2024-07-15 151044](https://github.com/user-attachments/assets/2fa13fde-fc31-40ab-848d-274e8f119c33)
 
+## 오라클 설치 및 SQL 계정 설정을 수행했다,,!!!!
+## SQL DEVELOPER 을 설치하고 실행 해 보았다,,!!!!
 
+![화면 캡처 2024-07-15 165315](https://github.com/user-attachments/assets/08251636-1364-47a9-b6aa-71c399160509)
 
 
 
