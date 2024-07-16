@@ -249,6 +249,41 @@ SELECT ENAME 이름, SAL 월급, SAL*12 연봉 FROM EMP;
 ![화면 캡처 2024-07-16 133059](https://github.com/user-attachments/assets/34c91e30-6c2a-4a2c-8531-58e08986a04a)
 ***
 
+## 무한 실습 !!
+***
+![화면 캡처 2024-07-16 134327](https://github.com/user-attachments/assets/5b620e0d-51b4-4291-bb4d-ce294f0484f6)
+***
 
+***
+![화면 캡처 2024-07-16 143557](https://github.com/user-attachments/assets/57ce4000-448f-4a4d-88ad-97e13fa1ba6f)
+***
 
+***
+![화면 캡처 2024-07-16 143621](https://github.com/user-attachments/assets/54a7960a-6113-445a-9f38-0cd28bafa671)
+***
 
+***
+![화면 캡처 2024-07-16 144559](https://github.com/user-attachments/assets/94d11e3f-8ea4-435c-9d4b-3a64abc8890a)
+***
+
+## 기습 퀴즈
+
+![화면 캡처 2024-07-16 144733](https://github.com/user-attachments/assets/38c3f3d4-628d-4495-ab17-5a6d6870d69f)
+
+***
+
+## 퀴즈 2
+
+![화면 캡처 2024-07-16 151738](https://github.com/user-attachments/assets/6291f060-b947-482e-a04c-5f61ba4705e8)
+
+***
+
+## 다시 실습
+
+![화면 캡처 2024-07-16 152103](https://github.com/user-attachments/assets/593e9d5c-1d2b-4b94-b906-14c5097a5ac4)
+
+***
+
+![화면 캡처 2024-07-16 152222](https://github.com/user-attachments/assets/fdcab42c-515e-41a7-bc53-c0326d483ea5)
+
+***
