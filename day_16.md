@@ -1,7 +1,9 @@
 ## 16일차!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 오라클을 사용해서 좀 더 자료를 검색 해봤다.
 
+***
 ![화면 캡처 2024-07-16 094313](https://github.com/user-attachments/assets/74657377-25a0-43f4-9519-f5f486fb64de)
+***
 
 ~~해보니까 SQLD 자격증도 따볼까 라는 생각이 들었다~~
 
@@ -200,6 +202,43 @@ COMMIT;
 ![화면 캡처 2024-07-16 102224](https://github.com/user-attachments/assets/677885ea-51d6-4122-a356-70d1f49647ff)
 ***
 
+
+
 ![화면 캡처 2024-07-16 102628](https://github.com/user-attachments/assets/c1a3d670-17ea-4e9d-9b32-e3f018064391)
 ***
+
+## SCOTT 에서 예제 실습~~
+***
+![화면 캡처 2024-07-16 104356](https://github.com/user-attachments/assets/7ee2ca51-2e59-4d5e-980f-a7e67014f984)
+***
+
+## SQL DEVELOPER 예제 실습
+```
+SELECT * FROM EMP;
+
+SELECT EMPNO, ENAME, DEPTNO FROM EMP;
+
+-- 중복이 있는 경우
+SELECT JOB, DEPTNO FROM EMP;
+SELECT DISTINCT JOB, DEPTNO FROM EMP;
+
+-- 연산식 사용하기
+SELECT *  FROM EMP;
+SELECT ENAME 이름, SAL 월급, SAL+SAL+SAL+COMM 분기급여 FROM EMP;
+
+-- QUIZ
+-- 이름(ENAME), 월급(SAL), 연봉(SAL*12) 검색해 보세요
+SELECT ENAME 이름, SAL 월급, SAL*12 연봉 FROM EMP;
+```
+## QUIZ 검색결과
+***
+![화면 캡처 2024-07-16 112637](https://github.com/user-attachments/assets/b5cc1a24-6e6f-4087-9f79-83cbea8b3959)
+***
+내림차순으로 꾸며봤다. // 오름차순은 ASC
+***
+![화면 캡처 2024-07-16 112921](https://github.com/user-attachments/assets/8186ec4e-f02d-4487-99bd-891d58d8a2f4)
+***
+
+
+
 
