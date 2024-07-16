@@ -239,6 +239,16 @@ SELECT ENAME 이름, SAL 월급, SAL*12 연봉 FROM EMP;
 ![화면 캡처 2024-07-16 112921](https://github.com/user-attachments/assets/8186ec4e-f02d-4487-99bd-891d58d8a2f4)
 ***
 
+## 테이블을 만들어보았따.
+
+***
+![화면 캡처 2024-07-16 114538](https://github.com/user-attachments/assets/180be7dc-5271-4072-b08a-13cac3eaa0c2)
+***
+
+***
+![화면 캡처 2024-07-16 133059](https://github.com/user-attachments/assets/34c91e30-6c2a-4a2c-8531-58e08986a04a)
+***
+
 
 
 
