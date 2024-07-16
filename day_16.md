@@ -190,13 +190,16 @@ INSERT INTO SALGRADE VALUES (5,3001,9999);
 COMMIT;
 
 ```
-
+***
 ![화면 캡처 2024-07-16 101330](https://github.com/user-attachments/assets/c8a6599e-2801-412a-b1f8-2ca397d5b6eb)
-
+***
 
 ![화면 캡처 2024-07-16 101504](https://github.com/user-attachments/assets/6181388e-ff14-4c0a-a7df-332de29d93e4)
-
+***
 
 ![화면 캡처 2024-07-16 102224](https://github.com/user-attachments/assets/677885ea-51d6-4122-a356-70d1f49647ff)
+***
 
 ![화면 캡처 2024-07-16 102628](https://github.com/user-attachments/assets/c1a3d670-17ea-4e9d-9b32-e3f018064391)
+***
+
