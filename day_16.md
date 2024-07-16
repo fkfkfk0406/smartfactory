@@ -287,3 +287,13 @@ SELECT ENAME 이름, SAL 월급, SAL*12 연봉 FROM EMP;
 ![화면 캡처 2024-07-16 152222](https://github.com/user-attachments/assets/fdcab42c-515e-41a7-bc53-c0326d483ea5)
 
 ***
+
+![화면 캡처 2024-07-16 153552](https://github.com/user-attachments/assets/33e1d984-7a66-4062-aa1c-027f08ef1162)
+
+***
+두개가 같은거삼
+![화면 캡처 2024-07-16 154432](https://github.com/user-attachments/assets/01a88dc7-a861-4a4b-97bd-b6ef6c019230)
+
+
+
+
