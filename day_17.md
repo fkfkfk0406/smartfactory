@@ -7,3 +7,26 @@
 
 ***
 
+![화면 캡처 2024-07-17 102021](https://github.com/user-attachments/assets/77019943-8241-4ff4-9357-8f37097a1360)
+
+***
+이런식으로 더 쉽게 할 수도 있따.
+
+
+![화면 캡처 2024-07-17 102058](https://github.com/user-attachments/assets/013f83ef-f43a-42e0-a051-be2a2ab60d6e)
+
+***
+
+## 교재 예제
+![화면 캡처 2024-07-17 102543](https://github.com/user-attachments/assets/5be0d86e-b61b-4d3c-b477-8565f9f429da)
+***
+
+살짝 변형
+
+
+![화면 캡처 2024-07-17 102613](https://github.com/user-attachments/assets/67968c28-0e2e-47d7-9cba-05e1b7c0c93a)
+***
+
+![화면 캡처 2024-07-17 103053](https://github.com/user-attachments/assets/5160f5a9-f484-42ee-a997-fa5630f67d7d)
+***
+
