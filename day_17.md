@@ -29,4 +29,32 @@
 
 ![화면 캡처 2024-07-17 103053](https://github.com/user-attachments/assets/5160f5a9-f484-42ee-a997-fa5630f67d7d)
 ***
+![화면 캡처 2024-07-17 103821](https://github.com/user-attachments/assets/ae61c8ff-de87-4522-bfda-7ba1de1ec414)
+***
+![화면 캡처 2024-07-17 103834](https://github.com/user-attachments/assets/d6f63eaa-3507-43f0-ae24-95dfad908395)
+***
+![화면 캡처 2024-07-17 104047](https://github.com/user-attachments/assets/d0e3f754-fe92-4644-9720-7aa052fa189e)
+***
+![화면 캡처 2024-07-17 104226](https://github.com/user-attachments/assets/0d862964-2cc4-4f33-a760-c1b4269c928f)
+***
+![화면 캡처 2024-07-17 111531](https://github.com/user-attachments/assets/717a70c3-3d0a-4079-99d1-abd8fe5c68aa)
+
+
+
+UNION을 사용해서 DEPTNO = 10 인것과 20인 데이터를 합쳐서 출력했음. 순서나 갯수가 다르면 안돼 ~~~
+***
+![화면 캡처 2024-07-17 112124](https://github.com/user-attachments/assets/8064f922-f93f-40e8-9c26-157998649511)
+
+
+
+개수가 같으면 합쳐짐 ~~~~
+***
+
+![화면 캡처 2024-07-17 112321](https://github.com/user-attachments/assets/4dd783f2-badd-4601-952b-63a4cb2c10e3)
+
+
+
+
+
+
 
