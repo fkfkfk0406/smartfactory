@@ -51,6 +51,48 @@ UNION을 사용해서 DEPTNO = 10 인것과 20인 데이터를 합쳐서 출력�
 ***
 
 ![화면 캡처 2024-07-17 112321](https://github.com/user-attachments/assets/4dd783f2-badd-4601-952b-63a4cb2c10e3)
+***
+
+![화면 캡처 2024-07-17 112504](https://github.com/user-attachments/assets/aff5fb20-1c5d-425b-b318-092f11bcca56)
+***
+
+## 교제 예제 (P125)
+```
+-- 1번
+SELECT * FROM EMP
+WHERE ENAME LIKE '%S';
+
+-- 2번
+SELECT * FROM EMP
+WHERE JOB = 'SALESMAN';
+
+-- 3-1번
+SELECT * FROM EMP
+WHERE SAL > 2000;
+
+-- 3-2번
+SELECT * FROM EMP
+MINUS
+SELECT * FROM EMP
+WHERE SAL < 2000;
+
+-- 4번
+SELECT * FROM EMP
+WHERE SAL >= 2000
+AND SAL <= 3000;
+
+-- 5번
+SELECT * FROM EMP
+WHERE ENAME LIKE '%E%'
+AND DEPTNO = 30
+AND SAL NOT BETWEEN 1000 AND 2000;
+
+-- 6번
+SELECT * FROM EMP
+WHERE COMM IS NULL
+AND JOB IN ('MANAGER', 'CLERK')
+AND ENAME NOT LIKE '_L%';
+```
 
 
 
