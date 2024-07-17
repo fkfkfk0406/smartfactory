@@ -294,6 +294,62 @@ SELECT ENAME 이름, SAL 월급, SAL*12 연봉 FROM EMP;
 두개가 같은거삼
 ![화면 캡처 2024-07-16 154432](https://github.com/user-attachments/assets/01a88dc7-a861-4a4b-97bd-b6ef6c019230)
 
+## VISUAL STUDIO 에서 SQLDEVELOPER 머시기 해버리기
+```
+using Oracle.ManagedDataAccess.Client;
+
+namespace ORACLETEST01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //1. 외부 프로그램 연결 모듈 받기 -- Nuget
+            //2. 연결 스크립트를 사용
+            string strConn = "Data Source=(DESCRIPTION=" +
+                "(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)" +
+                "(HOST=localhost)(PORT=1521)))" +
+                "(CONNECT_DATA=(SERVER=DEDICATED)" +
+                "(SERVICE_NAME=xe)));" +
+                "User Id=SCOTT;Password=TIGER;";
+
+            //1. 연결객체 만들기
+            OracleConnection conn = new OracleConnection(strConn);
+
+            //2. 연결 객체 만들기 -> client
+            conn.Open();
+
+            //3. 서버랑 놀기
+            //3.1 Query 명령객체 만들기
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+
+            //3.2 명령하기, 테이블 생성하기
+            cmd.CommandText = "Create Table PhoneBook" +
+                "(ID number(4) PRIMARY KEY, " +
+                "NAME varchar(20), " +
+                "HP varchar(20))";
+
+            ////3.2.1 테이블 삭제하기
+            //cmd.CommandText = "Drop Table PhoneBook";
+
+
+            //3.3 쿼리 실행하기
+            cmd.ExecuteNonQuery();
+
+
+            //4. 리소스 반환 및 종료
+            conn.Close();
+
+        }
+    }
+}
+```
+정상적으로 테이블이 들어왔다가 나갔다가 한다.
+
+***
+
 
 
 
