@@ -108,6 +108,37 @@ AND ENAME NOT LIKE '_L%';
 ***
 ![화면 캡처 2024-07-17 134025](https://github.com/user-attachments/assets/5a82d21c-3d8f-456c-92e6-e4521e76693b)
 ***
+![4](https://github.com/user-attachments/assets/f3e59260-638a-4949-bad7-e2c16e9a5fec)
+***
+
+## 위에 했던거 응용 퀴즈
+
+![화면 캡처 2024-07-17 141834](https://github.com/user-attachments/assets/1313ccc4-b231-4cca-8955-445e396c2e06)
+
+
+
+재밌다
+***
+## 교제 실습
+![화면 캡처 2024-07-17 143004](https://github.com/user-attachments/assets/3d1ab072-92fd-466c-9154-772fde1d9a18)
+***
+![화면 캡처 2024-07-17 143026](https://github.com/user-attachments/assets/171a7006-26a6-4686-babf-b0b027ca61d7)
+***
+![화면 캡처 2024-07-17 143115](https://github.com/user-attachments/assets/2faf1216-9f18-4192-b263-2b5dba9840c9)
+***
+![화면 캡처 2024-07-17 143825](https://github.com/user-attachments/assets/6127ffd5-b320-4df9-95ac-02f04abffc35)
+***
+![화면 캡처 2024-07-17 143847](https://github.com/user-attachments/assets/91350eaf-a082-42b4-957b-05f65128269a)
+***
+![화면 캡처 2024-07-17 144806](https://github.com/user-attachments/assets/80f72be7-291f-4b79-a02a-707ffe8a7c88)
+***
+![화면 캡처 2024-07-17 144824](https://github.com/user-attachments/assets/570656b9-a13c-4a28-8673-0b1083507b46)
+***
+![화면 캡처 2024-07-17 145013](https://github.com/user-attachments/assets/efc2aab6-83b3-438d-b4ef-40be51203684)
+***
+![화면 캡처 2024-07-17 145104](https://github.com/user-attachments/assets/12f7bd07-09c5-46af-bbbf-2849632d8d5d)
+***
+
 
 
 
