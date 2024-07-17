@@ -93,9 +93,21 @@ WHERE COMM IS NULL
 AND JOB IN ('MANAGER', 'CLERK')
 AND ENAME NOT LIKE '_L%';
 ```
+***
+![화면 캡처 2024-07-17 133110](https://github.com/user-attachments/assets/527db286-a575-45ff-b351-d65e6c6431ed)
 
 
 
+가상으로 테이블을 만들 수도 있다.
+***
+
+![화면 캡처 2024-07-17 133241](https://github.com/user-attachments/assets/92afe95a-961a-44f5-a2db-49b49649d2bd)
+
+***
+![화면 캡처 2024-07-17 133831](https://github.com/user-attachments/assets/ceb2f40e-e145-4230-b89f-7fb9d960c450)
+***
+![화면 캡처 2024-07-17 134025](https://github.com/user-attachments/assets/5a82d21c-3d8f-456c-92e6-e4521e76693b)
+***
 
 
 
