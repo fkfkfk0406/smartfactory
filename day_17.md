@@ -138,7 +138,80 @@ AND ENAME NOT LIKE '_L%';
 ***
 ![화면 캡처 2024-07-17 145104](https://github.com/user-attachments/assets/12f7bd07-09c5-46af-bbbf-2849632d8d5d)
 ***
+![화면 캡처 2024-07-17 151813](https://github.com/user-attachments/assets/6a4470e5-5c4d-4b54-85e3-6ea7ffbdf736)
+***
+![화면 캡처 2024-07-17 152225](https://github.com/user-attachments/assets/195ba792-09bf-4dce-bc10-d96b0d4065bb)
+***
+![화면 캡처 2024-07-17 152421](https://github.com/user-attachments/assets/84e6ea5a-a773-4339-856c-afdd5651884a)
+***
+이런것도 된다
 
+
+
+![화면 캡처 2024-07-17 152603](https://github.com/user-attachments/assets/c3fff5c3-bf18-4312-8072-b5702223511e)
+***
+
+## QUIZ
+![화면 캡처 2024-07-17 154743](https://github.com/user-attachments/assets/4926a9e1-7cee-4123-a8eb-c9631a723d0e)
+***
+
+## 실습
+![화면 캡처 2024-07-17 161124](https://github.com/user-attachments/assets/993eac0e-3728-4f6f-a41a-76193039578c)
+***
+![화면 캡처 2024-07-17 161328](https://github.com/user-attachments/assets/328fb990-95d4-4062-9717-a966dd90b8a0)
+***
+![화면 캡처 2024-07-17 161426](https://github.com/user-attachments/assets/933a3e90-731c-4eba-8006-d7bba19fe208)
+***
+![화면 캡처 2024-07-17 162342](https://github.com/user-attachments/assets/fe61f2fe-ec7b-4948-a172-eb9439937db6)
+***
+![화면 캡처 2024-07-17 162513](https://github.com/user-attachments/assets/33ed785e-95e2-4bd1-a0aa-f78fd40c3743)
+***
+![화면 캡처 2024-07-17 162609](https://github.com/user-attachments/assets/dd5f2b7e-2f55-4dad-947f-54da2a3593e7)
+***
+![화면 캡처 2024-07-17 163030](https://github.com/user-attachments/assets/ea58a238-36b6-4767-9194-217f1e81fc09)
+***
+![화면 캡처 2024-07-17 163318](https://github.com/user-attachments/assets/0b61eddc-57c2-4979-8b7a-ad0fbd62a3c3)
+***
+![화면 캡처 2024-07-17 164039](https://github.com/user-attachments/assets/f9bbd6bf-1e24-41e5-a54c-cd7857a8da1b)
+***
+![화면 캡처 2024-07-17 164241](https://github.com/user-attachments/assets/b448411d-e48f-46c4-9612-577991d8e89f)
+***
+
+## 연습문제 풀이
+```
+-- 연습문제 P174 ~ 175
+-- Q1 
+SELECT EMPNO,
+       RPAD (SUBSTR(EMPNO,-LENGTH(EMPNO),2),4, '*') AS MASKING_EMPNO,
+       ENAME,
+       RPAD(SUBSTR(ENAME,-LENGTH(EMPNO), 1),5,'*') AS MASKING_ENAME
+FROM EMP WHERE LENGTH(ENAME) >= 5 AND LENGTH(ENAME) <= 6;
+
+-- Q2
+SELECT EMPNO, ENAME, SAL,
+       ROUND(SAL / '21.5', 2) AS DAY_PAY,
+       ROUND(SAL / '21.5' / 8, 1) AS TIME_PAY
+FROM EMP;
+
+-- Q3
+SELECT EMPNO, ENAME, TO_CHAR(HIREDATE, 'YYYY/MM/DD') AS HIREDATE,
+       TO_CHAR(NEXT_DAY(ADD_MONTHS(HIREDATE, 3),'월요일'),'YYYY-MM-DD') AS R_JOB,
+       NVL(TO_CHAR(COMM),'N/A') AS COMM
+FROM EMP;
+
+-- Q4
+SELECT EMPNO, ENAME, MGR,
+    CASE
+        WHEN MGR IS NULL THEN 0000
+        WHEN SUBSTR(MGR,1,2) = 75 THEN 5555
+        WHEN SUBSTR(MGR,1,2) = 76 THEN 6666
+        WHEN SUBSTR(MGR,1,2) = 77 THEN 7777
+        WHEN SUBSTR(MGR,1,2) = 78 THEN 8888
+        ELSE MGR
+    END AS CHG_MGR
+FROM EMP;
+```
+어려웠다 ;;;;
 
 
 
