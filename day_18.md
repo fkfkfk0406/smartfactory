@@ -151,7 +151,44 @@ OR RUNTIME = (SELECT MAX(RUNTIME) FROM MOVIES);
 
 
 으악 이게 뭐야 무슨 소리야;;;
+-- PIVOT = 피봇 연산자는 행으로 나열되어 있는 데이터를 열로 나열하여 보기 쉽게 가공하는 것입니다.
+-- 진짜 농구 피벗 생각하면 될듯 ㅋㅋ
 ***
+![화면 캡처 2024-07-18 155658](https://github.com/user-attachments/assets/da0652a1-b605-4ca4-aaa3-f091b4fe8ecd)
+
+
+
+확실한건, 코드가 주어지지않고 작성 해보라고하면 절대로 못할듯 ;;;;;;;;;;
+좀 더 공부해야겠네
+***
+
+## JOIN
+![화면 캡처 2024-07-18 163616](https://github.com/user-attachments/assets/70940a3e-d2bc-4e6f-aead-85a92ef77655)
+***
+![화면 캡처 2024-07-18 163708](https://github.com/user-attachments/assets/16ef919d-08b2-49fc-aab2-0597cdc69885)
+***
+![화면 캡처 2024-07-18 164147](https://github.com/user-attachments/assets/a4e52a44-8646-4e9a-b1d5-27040015ab50)
+
+
+
+이때 나온 테이블은 실제하지 않는(파일로 존재하지 않는) 테이블임. 만들어진 테이블이다~!~~!!~~~!!!
+강사님曰 : JOIN 은 최소한의 정보로 뭘 만든다고 생각하면 쉽다~~~~~!~~~!!~~~~!!!
+JOIN = 여러 테이블을 하나의 테이블처럼 사용하는것이다~!~~!!~~~!!!
+***
+![화면 캡처 2024-07-18 164947](https://github.com/user-attachments/assets/88427463-7e7b-4571-bb58-cd33cbaa4a1c)
+***
+## 뀌즈
+![화면 캡처 2024-07-18 165651](https://github.com/user-attachments/assets/d825ba3b-7d2e-498f-b583-52d3277648b6)
+***
+![화면 캡처 2024-07-18 170427](https://github.com/user-attachments/assets/2de24e7a-1885-403f-a839-bccdf8b8d664)
+
+
+
+테이블 커밋 모르고 두번 넣었더니 값이 2개가 나온다 ;;;;
+***
+
+
+
 
 
 
