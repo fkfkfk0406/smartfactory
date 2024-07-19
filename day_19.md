@@ -126,7 +126,7 @@ ALL = 메인쿼리의 조건식을 서브쿼리의 결과 모두가 만족하면
 ![화면 캡처 2024-07-19 163201](https://github.com/user-attachments/assets/31cace13-2dbb-46cd-93f7-2630e1c6a0cc)
 ***
 
-## RENAME
+## RENAME COLUMN
 ![화면 캡처 2024-07-19 163326](https://github.com/user-attachments/assets/d59f1d01-3cff-47ed-8d48-46195250acfb)
 ***
 
@@ -141,6 +141,14 @@ ALL = 메인쿼리의 조건식을 서브쿼리의 결과 모두가 만족하면
 
 TEL 어디갔어~~~~~~
 ***
+## RENAME
+![화면 캡처 2024-07-19 164001](https://github.com/user-attachments/assets/93ecd283-fee4-4b47-a97d-e91fbc755a59)
+
+
+
+이름이 바꼈다~~~???
+***
+
 
 
 
