@@ -29,26 +29,37 @@
 ## ADV 퀴즈
 ![화면 캡처 2024-07-19 104159](https://github.com/user-attachments/assets/d46498aa-beb0-4dbb-a53a-4d0ab99a92c3)
 
-## LEFT OUTER JOIN
+## LEFT OUTER JOIN (왼쪽 외부 조인)
 ![화면 캡처 2024-07-19 104636](https://github.com/user-attachments/assets/b3fe2622-ab19-44c3-9a39-4ba84e400eaa)
 ***
 
-## RIGHT OUTER JOIN
+## RIGHT OUTER JOIN (오른쪽 외부 조인)
 ![화면 캡처 2024-07-19 104701](https://github.com/user-attachments/assets/4073752d-2f08-45e2-b180-653055798984)
 ***
 
-## NATURAL JOIN
+## (SQL99) NATURAL JOIN
 ![화면 캡처 2024-07-19 111548](https://github.com/user-attachments/assets/58c82ccb-ab4b-4901-92fa-cc8dd8fafd65)
 
 
 
 편하다 이건
 ***
-## JOIN ~ USING
+## (SQL99) JOIN ~ USING
 ![화면 캡처 2024-07-19 111933](https://github.com/user-attachments/assets/50029d92-70fb-4b13-a81f-b810a28417cd)
 
 
 NATURAL JOIN 도 그렇고 JOIN ~ USING도 그렇고 공통칼럼을 하나의 칼럼으로 나타내준다.
 ***
 
+## (SQL99) JOIN ~ ON
+![화면 캡처 2024-07-19 112447](https://github.com/user-attachments/assets/b9a72b49-349c-4d94-8e8f-5e261fe7605b)
+***
+
+## (SQL99) LEFT OUTER JOIN
+![화면 캡처 2024-07-19 114831](https://github.com/user-attachments/assets/a8a6c7ba-6781-4452-b4ce-0bab960716a3)
+***
+
+## (SQL99) RIGHT OUTER JOIN
+![화면 캡처 2024-07-19 114913](https://github.com/user-attachments/assets/77a83473-4706-4f7c-b593-265f006f3ec6)
+***
 
