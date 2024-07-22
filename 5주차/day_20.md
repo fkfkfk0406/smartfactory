@@ -45,6 +45,22 @@ DROP COLUMN TEL;
 ![화면 캡처 2024-07-22 104620](https://github.com/user-attachments/assets/79fa212d-37c7-43c5-b380-78270ede27aa)
 ***
 
+## 제약사항에 이름을 지정 할 수 있다고 ~~~?? 이름 지정은 'CONSTRAINT'
+![화면 캡처 2024-07-22 111726](https://github.com/user-attachments/assets/5aa637ee-e9a0-46b0-8159-681f26afd1ea)
+***
+
+## 제약이 없는 칼럼에 제약을 줄 수도 있음~~~ NOT NULL 을 줬다가 NULL을 주면 제약을 뺄 수 있음~~~
+![화면 캡처 2024-07-22 112146](https://github.com/user-attachments/assets/ea426c4a-3a7c-4c92-9676-135fb1556baf)
+![화면 캡처 2024-07-22 112156](https://github.com/user-attachments/assets/7f2da55c-4395-4565-997a-2b1259cde11a)
+
+
+
+물론 이름 지정 해줄 수도 있음
+![화면 캡처 2024-07-22 112326](https://github.com/user-attachments/assets/5900cb49-3414-4e7c-8adb-40958e95167c)
+***
+
+
+
 
 
 
