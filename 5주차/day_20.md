@@ -36,3 +36,16 @@ ALTER TABLE PERSON
 DROP COLUMN TEL;
 ```
 ***
+
+## 시퀀스 만들어보기
+![화면 캡처 2024-07-22 103356](https://github.com/user-attachments/assets/210c9074-81a8-4595-af48-32306ad151a9)
+***
+
+## 제약조건 실습
+![화면 캡처 2024-07-22 104620](https://github.com/user-attachments/assets/79fa212d-37c7-43c5-b380-78270ede27aa)
+***
+
+
+
+
+
