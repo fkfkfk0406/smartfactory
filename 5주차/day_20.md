@@ -57,6 +57,16 @@ DROP COLUMN TEL;
 
 물론 이름 지정 해줄 수도 있음
 ![화면 캡처 2024-07-22 112326](https://github.com/user-attachments/assets/5900cb49-3414-4e7c-8adb-40958e95167c)
+
+
+
+물론 삭제도 됨
+![화면 캡처 2024-07-22 112636](https://github.com/user-attachments/assets/1815b6aa-384a-4cc7-ad0a-390a0bfdd267)
+
+
+
+물론 이름도 바꿔짐
+![화면 캡처 2024-07-22 112809](https://github.com/user-attachments/assets/d6ee33ef-641f-4a78-9911-a927ce42ce62)
 ***
 
 
