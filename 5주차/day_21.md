@@ -61,7 +61,16 @@
 
 
 이렇게 부모테이블을 바로 삭제를 할 수 있다~~~~~
+??? : ON DELETE CASCADE 옵션을 적용하면 부모 테이블에서 row 를 삭제할 경우 연결된 자식 테이블의 row 가 함께 삭제됩니다. 연결된 데이터를 한 번에 지울 수 있어 데이터의 관리가 편리해지고 일관성을 유지할 수 있습니다.
 ***
+## CHECK 제약조건
+![화면 캡처 2024-07-23 114821](https://github.com/user-attachments/assets/7a00cec9-9dbd-4684-82a9-54ff58b8466e)
 
 
 
+PWD 값을 3자 이상 넣어야 된다~~
+
+
+
+![화면 캡처 2024-07-23 114853](https://github.com/user-attachments/assets/a03e622c-fc4a-4a5a-8389-ded1fb48785d)
+***
