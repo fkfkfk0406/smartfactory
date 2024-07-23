@@ -74,3 +74,91 @@ PWD 값을 3자 이상 넣어야 된다~~
 
 ![화면 캡처 2024-07-23 114853](https://github.com/user-attachments/assets/a03e622c-fc4a-4a5a-8389-ded1fb48785d)
 ***
+
+## DEFAULT 옵션
+![화면 캡처 2024-07-23 131006](https://github.com/user-attachments/assets/055a1997-4e7c-4a27-8abb-7f155e57111a)
+
+
+
+DEFUALT로 설정을 해주면 값을 안넣어도 된다~~~~. 디폴트가 1234로 되어있기 때문이다앗~~~~
+***
+![화면 캡처 2024-07-23 131559](https://github.com/user-attachments/assets/3ab154ea-9edf-4130-b20e-6a732ee81ffb)
+
+
+
+이런식으로 지정을 해준다면 저렇게해도 데이터가 들어간다~~
+***
+## 권한을 넣었다 뺐다
+여러권한을 한번에 부여하려면 ROLE을 만들어야함~~~~
+GRANT로 권한부여 REVOKE로 권한제거~~~~
+
+
+
+![화면 캡처 2024-07-23 135415](https://github.com/user-attachments/assets/a85e6b07-fcc3-4170-b2b2-37ee0d9508a0)
+***
+## 계정과 권한 함께 제거
+![화면 캡처 2024-07-23 135552](https://github.com/user-attachments/assets/47861047-7927-4c49-a463-5f20fa0528a4)
+***
+
+## PL/ SQL
+![화면 캡처 2024-07-23 143732](https://github.com/user-attachments/assets/76318769-ec6b-4906-9e89-90474213c4c9)
+
+## 한줄 주석 사용하기
+![화면 캡처 2024-07-23 144433](https://github.com/user-attachments/assets/92bf506b-18ad-47e1-918c-15632c18a8f8)
+***
+
+## 실습
+
+```
+Q) 부서테이블을 만들어서
+DEPTNO  10
+DNAME  '홍길동'
+LOC    '안동'
+----------------------------
+변수 선언은 DECLARE에서 하고 변수값 초기화는 BEGIN에서 하세요~~~
+```
+
+## 풀이
+![화면 캡처 2024-07-23 145643](https://github.com/user-attachments/assets/bf4b9e24-9bc8-453e-babc-57f99d0434e7)
+***
+
+## 실습
+![화면 캡처 2024-07-23 151604](https://github.com/user-attachments/assets/334f5afd-16e3-4ffe-9af1-9f8bfb6966aa)
+***
+![화면 캡처 2024-07-23 151728](https://github.com/user-attachments/assets/49143a36-40b5-4407-9575-cae0be81b043)
+***
+![화면 캡처 2024-07-23 151759](https://github.com/user-attachments/assets/1d70169d-3004-45c7-bbd6-292ea1b621c5)
+***
+![화면 캡처 2024-07-23 151958](https://github.com/user-attachments/assets/ca6514b3-f344-4526-869a-bc0a51a41bfa)
+***
+![화면 캡처 2024-07-23 152145](https://github.com/user-attachments/assets/4ccf1d21-8a23-4e22-b26d-c4ff0760256e)
+***
+![화면 캡처 2024-07-23 152959](https://github.com/user-attachments/assets/2baa660f-2c2c-4f41-bb0c-e2f051cdb5c3)
+***
+![화면 캡처 2024-07-23 153941](https://github.com/user-attachments/assets/d0a66d96-877b-46c8-9f68-27c0ce1b2706)
+***
+![화면 캡처 2024-07-23 154404](https://github.com/user-attachments/assets/383f1ceb-c046-459f-b150-a981e3d1a39b)
+***
+![화면 캡처 2024-07-23 154426](https://github.com/user-attachments/assets/f7c94759-17cc-401f-9aee-1e225d52431e)
+***
+![화면 캡처 2024-07-23 154856](https://github.com/user-attachments/assets/9410fb2f-9604-4181-a5e7-074e26d9126e)
+***
+![화면 캡처 2024-07-23 154943](https://github.com/user-attachments/assets/f595868c-0c83-41b5-b9bb-4f6f1ff7264b)
+***
+![화면 캡처 2024-07-23 155543](https://github.com/user-attachments/assets/14dc1d0b-9c8d-4eb4-b574-9f9a1f845893)
+***
+![화면 캡처 2024-07-23 161332](https://github.com/user-attachments/assets/15e12372-6801-47b0-aad1-4ab93750693a)
+***
+![화면 캡처 2024-07-23 161633](https://github.com/user-attachments/assets/c8de8340-cab0-4e14-bc56-d125941c6244)
+***
+![화면 캡처 2024-07-23 161754](https://github.com/user-attachments/assets/fe4e40d4-0672-4f61-b570-06c573ff4aed)
+***
+
+
+
+
+
+
+
+
+
