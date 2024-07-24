@@ -64,3 +64,94 @@ SYSTEM 계정에서 GRANT 해줘야해~~~
 ![화면 캡처 2024-07-24 114815](https://github.com/user-attachments/assets/9b23b33c-629d-4185-800e-1b3c566a8b0a)
 ***
 
+## 18장 , 19장
+```
+18장
+1. 커서
+  - 예외처리
+19장
+1. 저장 서브프로그램
+2. 프로시저
+3. 함수
+4. 패키지
+5. 트리거(기초)
+```
+## 실습
+![화면 캡처 2024-07-24 132100](https://github.com/user-attachments/assets/5c3aa348-2d1b-4b25-9ff4-9ada62bc18e2)
+***
+## 커서 실습
+![화면 캡처 2024-07-24 132759](https://github.com/user-attachments/assets/c43c6d1e-442e-4e51-909f-379e35904537)
+***
+![화면 캡처 2024-07-24 133725](https://github.com/user-attachments/assets/10547323-9bf0-4e05-8b0b-133fb04e749c)
+***
+## 예외처리
+![화면 캡처 2024-07-24 134142](https://github.com/user-attachments/assets/f27dce86-22b6-4286-8262-e225425f9836)
+
+
+
+DB에서 에러가 났는데 내부적으로 예외처리를 해줌~~
+***
+## 프로시저
+![화면 캡처 2024-07-24 141849](https://github.com/user-attachments/assets/5ca91e32-a318-4526-a8bd-bdc762b362d6)
+***
+![화면 캡처 2024-07-24 142621](https://github.com/user-attachments/assets/a88569ec-9fd8-4e51-8248-27ba02f2fea7)
+***
+![화면 캡처 2024-07-24 144216](https://github.com/user-attachments/assets/06045a7c-c0df-4352-95f7-df816eaa23c4)
+***
+![화면 캡처 2024-07-24 145020](https://github.com/user-attachments/assets/c911b6f9-d032-4c87-ba86-517a3bc87804)
+***
+![화면 캡처 2024-07-24 145121](https://github.com/user-attachments/assets/31a7ea9c-ce88-4718-96a3-b319142290a7)
+***
+![화면 캡처 2024-07-24 152053](https://github.com/user-attachments/assets/ab4baa72-537f-4ea1-9371-62ef7051c70d)
+***
+![화면 캡처 2024-07-24 152151](https://github.com/user-attachments/assets/ff94a458-b9ac-48f9-83cf-cedc788b0fdf)
+***
+## 함수
+![화면 캡처 2024-07-24 153114](https://github.com/user-attachments/assets/3b1ccf4f-f1aa-4e95-946e-004c3619b27b)
+***
+![화면 캡처 2024-07-24 153305](https://github.com/user-attachments/assets/92ca08cd-ecd8-4ea0-a407-d396b62dc463)
+
+
+
+
+이런거 하려고 함수 만듬 ㅋㅋ
+***
+
+## 패키지
+![화면 캡처 2024-07-24 154731](https://github.com/user-attachments/assets/d8ed17e1-4e71-4fc2-985e-26b8f5dff1c1)
+***
+
+## 트리거
+![화면 캡처 2024-07-24 161718](https://github.com/user-attachments/assets/9de0c14b-58ba-4385-806b-252e24d52dab)
+***
+![화면 캡처 2024-07-24 162144](https://github.com/user-attachments/assets/c78e16eb-0d95-4e4b-981c-4ba94846e2c4)
+
+
+
+
+SYSDATE가 들어가서 오늘 요일로 바꿨다. 수요일날 바꾸려니까 안바껴~~~~ (트리거 발생)
+***
+## 트리거 (로그)
+![화면 캡처 2024-07-24 163313](https://github.com/user-attachments/assets/8f41d93b-49fe-47a4-9f70-500115a5e30e)
+***
+![화면 캡처 2024-07-24 163522](https://github.com/user-attachments/assets/4ae0e196-64bd-47b9-98a9-6d22c32fce01)
+***
+![화면 캡처 2024-07-24 164437](https://github.com/user-attachments/assets/f7060427-a6f9-475a-91b2-2eeda160b7a2)
+***
+![화면 캡처 2024-07-24 164524](https://github.com/user-attachments/assets/ab81878d-f93b-4c74-88ba-bf4bf65ece42)
+***
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
