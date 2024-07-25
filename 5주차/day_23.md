@@ -50,7 +50,14 @@ C# 기본문법 정리
     - using
       - IDispoable 인터페이스를 구현
       - 블록을 벗어나면 Dispose 메서드가 자동 호출
-
+8. LINQ(Language Integrated Query)
+10. Lamda식
+  - 메서드 사용의 짧은 표현
+  - Lamda 전용 델리게이트
+    - Actioin
+      - 반환 형식이 없다. return 없음
+    - Func
+      - 반환 형식이 있다. return 있음
 ```
 ## 퀴즈
 ```
@@ -403,4 +410,309 @@ namespace filetest02
 StreamWriter 객체에서 writer.Close()를 명시적으로 호출하지 않아도 잘 작동하는 이유는 using 문을 사용했기 때문입니다.
 using 문이 종료되면 StreamWriter 객체의 Dispose 메서드가 자동으로 호출되어 스트림이 닫히고, 리소스가 해제됩니다.
 ```
+## 프로그래머스 문제 풀기
+```
+할일 목록
+using System.ComponentModel.Design;
+using System.Security.Cryptography;
+
+namespace ConsoleApp62
+{
+    internal class Program
+    {
+        static string[] solution(string[] todo_list, bool[] finished)
+        {
+            List<string> newWorkList = new List<string>();
+            for(int i = 0; i < todo_list.Length; i++)
+            {
+                if (!finished[i])
+                    newWorkList.Add(todo_list[i]);
+            }
+
+            return newWorkList.ToArray(); //리스트를 배열로 변경하는 메소드~
+        }
+
+        static void Main(string[] args)
+        {
+            string[] todo_list = { "problemsolving", "practiceguitar", "swim", "studygraph" };
+            bool[] finished = { true, false, true, false };
+
+            string[] list = solution(todo_list, finished);
+
+            foreach (string s in list)
+            {
+                Console.WriteLine(s);
+            }
+        }
+    }
+}
+```
+```
+5명씩
+using System.ComponentModel.Design;
+using System.Reflection.Metadata.Ecma335;
+
+namespace ConsoleApp63
+{
+    internal class Program
+    {
+        static string[] solution(string[] names)
+        {
+            List<string> result = new List<string>();
+            for (int i = 0; i < names.Length; i += 5)
+            {
+                result.Add(names[i]);
+            }
+            return result.ToArray();
+        }
+        static void Main(string[] args)
+        {
+            string[] names = { "nami", "ahri", "jayce", "garen", "ivern", "vex", "jinx" };
+            string[] list = solution(names);
+            foreach (string s in list)
+            {
+                Console.Write(s + " ");
+            }
+        }
+
+    }
+}
+```
+## LinQ (Language Integrated Query)
+![화면 캡처 2024-07-25 141443](https://github.com/user-attachments/assets/b5aad907-fd3f-44f7-8863-1c54eb73b5d4)
+***
+```
+namespace LinQ01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] numbers = { 9, 2, 6, 4, 5, 3, 7, 8, 1, 10};
+            var result = from n in numbers
+                         where n % 3 == 0
+                         orderby n descending
+                         select n;
+            foreach(int n in result)
+            {
+                Console.WriteLine(n + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+3의 배수를 오름차순으로 출력해봤다.
+```
+## QUIZ
+```
+LINQ를 사용해서 알파벳을 역순으로 출력하삼
+-------------------------------------------------------
+namespace LinQQuiz
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] alphabets = new char[26];
+            for(int i = 0; i < alphabets.Length; i++)
+            {
+                alphabets[i] = (char)('A' + i);
+            }
+            var result = from a in alphabets
+                         orderby a descending
+                         select a;
+            foreach(char c in result)
+            {
+                Console.Write(c + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+```
+## LINQ 실습
+```
+using System.Data;
+using System.Net.WebSockets;
+using System.Text.RegularExpressions;
+
+namespace LinqExam03
+{
+    //p624
+    class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Address { get; set; }
+
+        public Person(string name, int age, string address)
+        {
+            Name = name;
+            Age = age;
+            Address = address;
+        }
+        public override string ToString()
+        {
+            return string.Format($"{Name}{Age}{Address}");
+        }
+    }
+    class MainLanguage
+    {
+        public string Name { get; set; }
+        public string Language { get; set; }
+
+        public MainLanguage(string name, string language)
+        {
+            Name = name;
+            Language = language;
+        }
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Person> people = new List<Person>
+            {
+                new Person("Tom", 63, "Korea"),
+                new Person("Winnie", 40, "Tibet"),
+                new Person("Anders", 47, "Sudan"),
+                new Person("Hans", 25, "Tibet"),
+                new Person("Eureka", 32, "Sudan"),
+                new Person("Hawk", 15, "Korea")
+            };
+
+            List<MainLanguage> languages = new List<MainLanguage>
+            {
+                new MainLanguage("Anders", "Delphi"),
+                new MainLanguage("Anders", "C#"),
+                new MainLanguage("Tom", "Borland C++"),
+                new MainLanguage("Hans", "Visual C++"),
+                new MainLanguage("Winnie", "R")
+            };
+            //var all = from person in people
+            //          select person;
+            //foreach (var item in all)
+            //{
+            //    Console.WriteLine($"{item.Name}: {item.Age} in {item.Address}");
+            //}
+            //Console.WriteLine(string.Join(Environment.NewLine, all));
+
+            //var nameList = from person in people 
+            //               select person.Name;
+            //foreach(var item in nameList)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //var nameList = people.Select((elem) => elem.Name); //확상메서드표현 Lamda식
+            //foreach(var name in nameList)
+            //{
+            //    Console.WriteLine(name);
+            //}
+
+            //var dataList = from person in people
+            //               select new
+            //               {
+            //                   Name = person.Name,
+            //                   Year = DateTime.Now.AddYears(-person.Age).Year
+            //               };
+            //foreach(var item in dataList)
+            //{
+            //    Console.WriteLine($"{item.Name} - {item.Year}");
+            //}
+
+            //group by, Join
+            var ageOver30 = from person in people
+                            where person.Age > 30
+                            select person;
+            var addGroup = from person in people
+                           group person by person.Address;
+            foreach (var itemgroup in addGroup)
+            {
+                Console.WriteLine($"[{itemgroup.Key}]");
+                foreach(var item in itemgroup)
+                {
+                    Console.WriteLine(item);
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}
+```
+![화면 캡처 2024-07-25 154937](https://github.com/user-attachments/assets/734a50ed-242e-4539-bde3-a26dabaf7896)
+
+
+
+![화면 캡처 2024-07-25 154953](https://github.com/user-attachments/assets/34c0b38b-9b2a-481d-a402-b2c8a68d2538)
+***
+## Lamda
+```
+namespace LamdaTest01
+{
+    class Calculator
+    {
+        public int Plus(int a, int b)
+        {
+            return a + b;
+        }
+    }
+    internal class Program
+    {
+        delegate int Calculate(int a, int b);
+        static void Main(string[] args)
+        {
+            Calculate calc = (int a, int b) => a + b;
+            //Calculate cal = delegate (int a, int b)
+            //{
+            //    return a + b;
+            //};
+            Console.WriteLine(calc(100, 200));
+            //Console.WriteLine(cal(100, 200));
+        }
+    }
+}
+```
+```
+namespace LamdaExam02
+{
+    internal class Program
+    {
+        delegate int? MyDivide(int a, int b); // ? = (값에 null이 들어갈 수 있다)
+        static void Main(string[] args)
+        {
+            //Thread thread = new Thread(
+            //    (obj) => Console.WriteLine("~~~~~~~~~~")
+            //    );
+            MyDivide myFunction = (a, b) =>
+            {
+                if (b == 0)
+                    return null;
+                return a / b;
+            };
+        }
+    }
+}
+```
+Lamda 전용 델리게이트인 Action과 Func
+
+
+
+![화면 캡처 2024-07-25 164256](https://github.com/user-attachments/assets/f4a8f79d-d141-49ff-b4c1-7fe8b43b995a)
+***
+![화면 캡처 2024-07-25 165330](https://github.com/user-attachments/assets/5df805f5-a254-47af-ba33-aeaedf0ba0e3)
+
+
+
+Action을 아주 쉽게 설명한것임~~~~
+***
+
+
+
+
+
+
+
+
 
