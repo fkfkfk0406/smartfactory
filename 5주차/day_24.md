@@ -264,11 +264,289 @@ namespace FileExam_Basic
     }
 }
 ```
+## 퀴즈
+```
+﻿- 텍스트 파일을 복사하는 프로그램을 
+  만들어 봅시다.
+
+ 사용예 ) myCopy.exe abc.txt   cba.txt
+
+abc.txt --> Hello World~!
+
+------------------------------------------------
+
+FileStream을 이용해서 만드세요.
+StreamReader
+StreamWriter
+
+현재 프로그램은 txt파일만 입력받습니다.
+```
+## 풀이
+```
+namespace myCopy
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //arg[0] a.txt
+            //arg[1] b.txt
+            string orgnfile = @$"C:\Temp\{args[0]}";
+            string copyfile = @$"C:\Temp\{args[1]}";
+            FileStream fs = new FileStream(orgnfile, FileMode.Create);
+
+            using(StreamWriter write = new StreamWriter(fs))
+            {
+                write.WriteLine("안녕하삼계탕");
+            }
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(orgnfile))
+                using (StreamWriter sw = new StreamWriter(copyfile))
+                {
+                    var line = "";
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        sw.WriteLine(line);
+                    }
+                }
+                Console.WriteLine("복사성공");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
+}
+```
+***
+## Thread
+```
+namespace ThreadTest01
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Thread t1 = new Thread(threadFunc1);
+            Thread t2 = new Thread(threadFunc2);
+            t1.Start();
+            t2.Start();
+        }
+        static void threadFunc1()
+        {
+            for(int i = 1; i <= 100; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+        static void threadFunc2()
+        {
+            char c1 = 'A';
+            char c2 = 'a';
+            for(int i = 1; i <= 26; i++)
+                Console.WriteLine((char)c1++);
+            for(int j = 1; j <= 26; j++)
+                Console.WriteLine((char)c2++);
+        }
+    }
+}
+```
+```
+namespace ThreadTest02
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Thread t = new Thread(threadFunc);
+            t.IsBackground = true; //Main 종료시 바로 종료됨
+            t.Start();
+            t.Join();   //Main 스레드가 t 를 기다려줍니다
+
+            Thread.CurrentThread.Name = "main 스레드";
+            string mtName = Thread.CurrentThread.Name;
+            Console.WriteLine($"{mtName} 프로그램 종료");
+        }
+        static void threadFunc()
+        {
+            Console.WriteLine("7초 후 프로그램 종료");
+            Thread.Sleep(7000);
+
+            Thread.CurrentThread.Name = "thread1 스레드";
+            string mtName = Thread.CurrentThread.Name;
+            Console.WriteLine($"{mtName} 프로그램 종료");
+        }
+    }
+}
+```
+```
+visual C#에서의 스레드
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp6
+{
+    public partial class Form1 : Form
+    {
+        private Thread thread1;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+
+                thread1 = new Thread(UpdateTime);
+                thread1.IsBackground = true;
+                thread1.Start();
+                
+            }
+        }
+        private void UpdateTime()
+        {
+            while (true)
+            {
+                DateTime currentTime = DateTime.Now;
+                string strTime = currentTime.ToString("hh : mm : ss");
+
+                //this.Invoke((MethodInvoker)delegate
+                //{
+                //    label1.Text = strTime;
+                //});
+
+                Invoke((Action)(() => label1.Text = strTime));
+
+                Thread.Sleep(1000);
+            }
+        }
+    }
+}
+```
+![화면 캡처 2024-07-26 154758](https://github.com/user-attachments/assets/66485561-2163-4bf9-b4bd-a462a8fd9c1a)
+***
+```
+timer를 이용해서 간단하게도 작성이 가능하다.
 
 
 
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
+namespace timerapp
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+           timer1.Start();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("hh : mm : ss");
+        }
+    }
+}
+```
+## QUIZ
+```
+Q) 파일읽기와 파일쓰기 
+     2 기능을 메소드로 만들어 봅시다.
+    Main에서는  writeThread / readThread로  만들어서
+    동작하도록 구현해 봅시다.
+   단, 파일은 다음과 내용이 입력되어 있습니다.
+    C:\Temp\data.txt  --> "파일처리 / 스레드 프로그래밍은 재미있다~!"
+---------------------------------------------------------------------------------------------
+Main()
+{
+     Thread writeThread  = new Thread( DataWrite );
+     Thread readThread = new Thread( DataRead );
+     //Background 스레드로 만드세요.
+    // thread join을 사용하여 Main메소드가 스레드가 종료될 때까지 기다립니다.
+ }
+ static void DataWrite()
+ {
+ }
+...
+```
+## 풀이
+```
+namespace ConsoleApp67
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Thread writeThread = new Thread(DataWrite);
+            Thread readThread = new Thread(DataRead);
+
+            writeThread.IsBackground = true;
+            readThread.IsBackground = true;
+            writeThread.Start();
+            writeThread.Join();
+            readThread.Start();
+            readThread.Join();
+
+            //Background  스레드로 만드세요
+            //thread join  을 사용하여 main메소드가 스레드가 종료될때 까지
+            //기다립니다.
+        }
+        static void DataWrite()
+        {
+            string data = $@"C:\Temp\data.txt";
+            FileStream fs = new FileStream(data, FileMode.Create);
+
+            using (StreamWriter sw = new StreamWriter(fs))
+            {
+                sw.WriteLine("파일처리/ 스레드 프로그래밍은 재미있다~!");
+            }
+            Console.WriteLine("파일처리 완료");
+        }
+        static void DataRead()
+        {
+            string readData = File.ReadAllText($@"C:\Temp\data.txt");
+            Console.WriteLine(readData);
+        }
+    }
+}
+```
 
 
 
