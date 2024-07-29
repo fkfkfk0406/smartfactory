@@ -184,6 +184,12 @@ DROP TABLE EMP_HW;
 71.5점으로 마무리 30 문제라 너무 힘들었다,,,
 ***
 ## 시험 이후 winform 실습~~~
+![화면 캡처 2024-07-29 171728](https://github.com/user-attachments/assets/9e19009e-4e9a-4b10-9ddb-a744b4ff7c9f)
+
+
+
+신호등을 만들어봤따.
+***
 
 
 
