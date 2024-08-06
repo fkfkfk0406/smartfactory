@@ -1,7 +1,10 @@
-![image](https://github.com/user-attachments/assets/05f63225-d467-4979-b41b-d484201c8356)길고 짧은 휴가가 끝났다...
+길고 짧은 휴가가 끝났다...
 다녀오니 골골대는 몸뚱이 밖에 안남았다. 컨디션 조절 잘하기,,!!
 ***
 ```
+![image](https://github.com/user-attachments/assets/05f63225-d467-4979-b41b-d484201c8356)
+
+
 뇌풀기 윈폼 복습
 
 namespace P179
