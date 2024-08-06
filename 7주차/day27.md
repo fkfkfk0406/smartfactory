@@ -1,8 +1,9 @@
 길고 짧은 휴가가 끝났다...
-다녀오니 골골대는 몸뚱이 밖에 안남았다. 컨디션 조절 잘하기,,!!
+다녀오니 골골대는 몸뚱이 밖에 안남았다. 컨디션 조절을 잘하자
 ***
 ```
-![image](https://github.com/user-attachments/assets/05f63225-d467-4979-b41b-d484201c8356)
+![화면 캡처 2024-08-06 094951](https://github.com/user-attachments/assets/c98ab2b8-702c-4369-8773-de93d1e42496)
+
 
 
 뇌풀기 윈폼 복습
@@ -70,3 +71,17 @@ namespace WinFormsApp8
     }
 }
 ```
+***
+![image](https://github.com/user-attachments/assets/b4d80498-31c9-4d65-b06c-bc563e1a5806)
+
+
+
+SQLDEVELOPER 로 실습을 해보았다.
+***
+![image](https://github.com/user-attachments/assets/efedafba-c4df-4fc0-8544-cfcdb63e50ef)
+
+
+
+STARUML을 활용해서 실습을 해봤다.
+***
+
