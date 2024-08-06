@@ -84,4 +84,8 @@ SQLDEVELOPER 로 실습을 해보았다.
 
 STARUML을 활용해서 실습을 해봤다.
 ***
+![image](https://github.com/user-attachments/assets/6ec2ff83-bb68-41ef-b3cd-aa6ddf8192af)
 
+
+AccessForm을 실습해보았다 이건 좀 신기 ㄷㄷ
+***
