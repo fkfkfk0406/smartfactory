@@ -85,3 +85,97 @@ namespace SocketTCPClient
 }
 ```
 ***
+![image](https://github.com/user-attachments/assets/1380a182-737b-4313-abc2-69a1d0183d54)
+
+
+
+서버를 만들어서  파일을 보내는것도 작성 해봤다.
+```
+using System.IO;
+using System.Net;
+using System.Net.Sockets;
+
+namespace PictureSaveServer
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //1. 서버 소켓 만들기, binding, Listening
+            TcpListener server = new TcpListener(IPAddress.Any, 13000);
+            server.Start();
+            Console.WriteLine("서버가 시작 됐삼. 클라이언트 기다리는중이삼");
+            //3. accept
+            TcpClient client = server.AcceptTcpClient();
+            Console.WriteLine("클라이언트가 연결됐삼");
+            //5. read, write
+                //소켓에서 패킷을 가져오기
+                //파일에 저장
+            NetworkStream networkStream = client.GetStream();
+            //그림파일 수신 및 저장
+            using (FileStream fileStream = new FileStream("received_image.png", FileMode.Create, FileAccess.Write))
+            {
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+
+                while ((bytesRead = networkStream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    fileStream.Write(buffer, 0, bytesRead);
+                }
+            }
+            Console.WriteLine("파일 수신 완료.");
+
+            // 연결 종료
+            networkStream.Close();
+            client.Close();
+            server.Stop();
+        }
+    }
+}
+```
+
+```
+using System.Net.Sockets;
+
+namespace PicturSendClient
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // 서버 IP와 포트 설정
+            string serverIp = "192.168.0.19";
+            int port = 13000;
+
+            // TCP 클라이언트 생성 및 서버 연결
+            TcpClient client = new TcpClient(serverIp, port);
+            Console.WriteLine("서버에 연결되었습니다.");
+
+            // 네트워크 스트림 생성
+            NetworkStream networkStream = client.GetStream();
+
+            // 전송할 파일 경로 설정
+            string filePath = "image_to_send.jpg";
+
+            // 파일 읽기 및 서버로 전송
+            using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+            {
+                byte[] buffer = new byte[1024];
+                int bytesRead;
+
+                while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    networkStream.Write(buffer, 0, bytesRead);
+                }
+            }
+
+            Console.WriteLine("파일 전송 완료.");
+
+            // 연결 종료
+            networkStream.Close();
+            client.Close();
+        }
+    }
+}
+```
+***
