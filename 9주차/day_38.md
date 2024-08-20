@@ -1,0 +1,117 @@
+### 피곤하다
+### 아침 퀴즈
+```
+https://github.com/HaSense/CSharp/tree/master/Network 
+A16.SimpleTCPServer_using.cs 를 서버로 사용하세요.
+A17.SimpleClient는 주고 받는 형식으로 되어 있어야 A16서버랑 통신을 하는데
+패킷을 받기만 하는 코드로 되어있습니다.
+A17.SimpleClient 코드를 수정하여 두 프로그램이 서로 통신이 되게 만들어 보세요!!!!
+```
+### 풀이
+```
+서버 예제 코드)
+
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // 서버 소켓 생성
+        TcpListener server = null;
+        try
+        {
+            int port = 13000;
+            IPAddress localAddr = IPAddress.Parse("192.168.0.19");
+
+            // 서버 소켓 초기화
+            server = new TcpListener(localAddr, port);
+
+            // 서버 시작
+            server.Start();
+            Console.WriteLine("서버가 시작되었습니다. 클라이언트를 기다리는 중...");
+
+            // 클라이언트의 연결을 기다림
+            using (TcpClient client = server.AcceptTcpClient())
+            {
+                Console.WriteLine("클라이언트가 연결되었습니다.");
+
+                // 네트워크 스트림을 통해 데이터를 주고받음
+                using (NetworkStream stream = client.GetStream())
+                {
+                    // 클라이언트로부터 데이터를 읽음
+                    byte[] buffer = new byte[256];
+                    int bytesRead = stream.Read(buffer, 0, buffer.Length);
+                    string receivedMessage = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                    Console.WriteLine("클라이언트로부터 받은 메시지: " + receivedMessage);
+
+                    // 클라이언트에게 메시지 전송
+                    string responseMessage = "메시지를 받았습니다.";
+                    byte[] responseData = Encoding.UTF8.GetBytes(responseMessage);
+                    stream.Write(responseData, 0, responseData.Length);
+                    Console.WriteLine("클라이언트에게 응답을 전송했습니다.");
+                }
+            }
+        }
+        catch (SocketException e)
+        {
+            Console.WriteLine("소켓 예외: " + e.ToString());
+        }
+        finally
+        {
+            // 서버 소켓을 종료
+            if (server != null)
+            {
+                server.Stop();
+            }
+        }
+
+        Console.WriteLine("서버를 종료합니다.");
+    }
+}
+```
+```
+클라이언트 코드)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleTCPClient
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string server = "192.168.0.19";
+            int port = 13000;
+
+            TcpClient client = new TcpClient(server, port);
+
+            NetworkStream stream = client.GetStream();
+
+            //보내기
+            string greet = "반갑노";
+            byte[] message = new byte[256];
+            message = Encoding.UTF8.GetBytes(greet);
+            stream.Write(message, 0, message.Length);
+            Console.WriteLine("보낸 메시지 : " +  greet);
+
+
+            //받기
+            byte[] data = new byte[256];
+            int bytes = stream.Read(data, 0, data.Length);
+            string responseData = Encoding.UTF8.GetString(data, 0, bytes);
+            Console.WriteLine($"Received: {responseData}");
+
+            client.Close();
+        }
+    }
+}
+```
