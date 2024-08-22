@@ -28,3 +28,15 @@
 
 
 오 ㅋㅋㅋ
+
+
+
+![image](https://github.com/user-attachments/assets/7b7e613f-13f1-466b-ae8d-55964797ed5d)
+
+
+
+![image](https://github.com/user-attachments/assets/1e80baee-1ffb-41aa-bbab-140a0181bcd6)
+
+
+
+평소에는 파란색이다가 커서를 올리면 빨간색. 클릭을 하면 노란색으로 바뀐다 오 ㅋㅋ
