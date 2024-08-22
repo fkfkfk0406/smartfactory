@@ -19,4 +19,12 @@
 
 
 
-음 역시 재밌다. --아직까지는--
+음 역시 재밌다. ~~아직까지는~~
+
+
+
+![image](https://github.com/user-attachments/assets/4f2225ae-23b4-4e2a-b305-fae1f24728b8)
+
+
+
+오 ㅋㅋㅋ
