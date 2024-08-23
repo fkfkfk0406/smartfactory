@@ -1,4 +1,4 @@
-## 내일은 sqld 시험이다.
+![image](https://github.com/user-attachments/assets/d49a4ff9-edd1-45ea-adb0-ca09d51e1193)## 내일은 sqld 시험이다.
 ### 그래서 하루종일 sqld 공부를 했다.
 ```
 데이터베이스 : 데이터의 집합.
@@ -473,7 +473,8 @@ NULL 의 ERD 표기법
 
 </html>
 ```
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/905bc09e-3995-4a53-af6d-350e67feccd1)
+
 
 
 
