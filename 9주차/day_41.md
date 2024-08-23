@@ -404,7 +404,77 @@ NULL 의 ERD 표기법
 			2. 불필요한 인덱스 생성 -> 저장공간 낭비 및 DML 성능 저하
 		** 인덱스는 원래 조회 성능을 향상시키기 위한 객체이며, 인덱스는 DML(INSERT/UPDATE/DELETE)시 INDEX SPLIT 현상으로 인해 성능이 저하된다.
 ```
-	
+## 물론 HTML 실습도 진행 했따.
+```
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        .clear {
+            clear: both;
+        }
+
+        aside {
+            width: 175px;
+            height: 398px;
+            float: left;
+            padding: 2px;
+            border: solid 2px #f00;
+        }
+
+        nav {
+            height: 150px;
+            margin: 2px;
+            border: solid 2px #00f;
+        }
+
+        header {
+            width: 800;
+            height: 60px;
+            margin: 2px;
+            border: solid 2px #f00;
+        }
+
+        main {
+            border: solid 2px #00f;
+            float: left;
+            width: 618px;
+            height: 400px;
+        }
+        section{
+            width: 500;
+            height: 150px;
+            margin: 2px;
+            border: solid 2px #0f0;
+        }
+
+        footer {
+            width: 800;
+            height: 60px;
+            margin: 2px;
+            border: solid 2px #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <header>상단 헤더</header>
+    <aside>좌측
+        <nav>메뉴</nav>
+    </aside>
+    <main>메인 콘텐츠
+        <section>컨텐츠 1</section>
+        <section>컨텐츠 2</section>
+    </main>
+    <div class="clear"></div>
+    <footer>하단 푸터</footer>
+</body>
+
+</html>
+```
+![Uploading image.png…]()
+
 
 
 
