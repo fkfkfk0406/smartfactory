@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d49a4ff9-edd1-45ea-adb0-ca09d51e1193)## 내일은 sqld 시험이다.
+## 내일은 sqld 시험이다.
 ### 그래서 하루종일 sqld 공부를 했다.
 ```
 데이터베이스 : 데이터의 집합.
