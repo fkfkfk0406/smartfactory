@@ -82,3 +82,32 @@
 ```
 ![image](https://github.com/user-attachments/assets/ca4d03ab-e9a1-4373-a25c-65e97db48955)
 ***
+제이쿼리도 사용 해 봤다.
+```
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+        crossorigin="anonymous">
+</script>>
+</head>
+<body>
+    <h1>반갑습니다.</h1>
+
+    <script>
+        $(document).ready(function() {
+            $('*').css('color', 'red');
+        });
+    </script>
+</body>
+</html>
+```
+
+
+
+![image](https://github.com/user-attachments/assets/ea2941aa-62a6-4b04-9945-d6b61ed5865b)
+
