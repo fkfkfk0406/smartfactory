@@ -62,3 +62,56 @@ namespace QuizEmptyApp
 
 ![image](https://github.com/user-attachments/assets/6a48699f-5413-4d6d-a442-5dfcae09da6b)
 ***
+### viewbag 실습
+```
+namespace ViewDataEmpty
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllersWithViews();
+            var app = builder.Build();
+
+            app.UseStaticFiles();
+            app.UseRouting();
+
+            app.MapControllerRoute(
+                name: "dafault",
+                pattern: "{controller=Home}/{action=UseViewBag}/{id?}");
+
+            app.Run();
+        }
+    }
+}
+```
+```
+
+@{
+    ViewData["Title"] = "UseViewBag";
+}
+
+<h1>UseViewBag</h1>
+<p></p>
+<span>첫번째 데이터 : </span> @ViewBag.data1
+<br />
+<span>두번째 데이터 : </span> @ViewBag.data2
+<br />
+<span>세번째 데이터 : </span> @ViewBag.data3
+<br />
+```
+```
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h3>@TempData["person1"]</h3>
+<h3>@ViewData["person2"]</h3>
+```
+## 실행 결과
+![image](https://github.com/user-attachments/assets/4a91e9a4-deed-40ea-9ad1-42e5797f4f93)
+***
