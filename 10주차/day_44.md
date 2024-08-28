@@ -115,3 +115,71 @@ namespace ViewDataEmpty
 ## 실행 결과
 ![image](https://github.com/user-attachments/assets/4a91e9a4-deed-40ea-9ad1-42e5797f4f93)
 ***
+```
+using Microsoft.AspNetCore.Mvc;
+
+namespace ViewDataEmpty.Controllers
+{
+    public class HomeController : Controller
+    {
+        public IActionResult Index()
+        {
+            TempData["person1"] = "홍길동";
+            ViewData["person2"] = "이순신";
+            return View();
+        }
+
+        public IActionResult UseViewBag()
+        {
+            ViewBag.data1 = "data1";
+            ViewBag.data2 = 100;
+            ViewBag.DATA3 = DateTime.Now.ToShortDateString();
+            string[] arr = { "사과", "배", "오렌지" };
+            ViewBag.DATA4 = arr;
+
+            ViewBag.DATA5 = new List<string>()
+            {
+                "축구","야구","농구"
+            };
+
+            return View();
+        }
+    }
+}
+```
+```
+
+@{
+    ViewData["Title"] = "UseViewBag";
+}
+
+<hr />
+
+<h1>UseViewBag</h1>
+<p></p>
+<span>첫번째 데이터 : </span> @ViewBag.data1
+<br />
+<span>두번째 데이터 : </span> @ViewBag.data2
+<br />
+<span>세번째 데이터 : </span> @ViewBag.data3
+<br />
+
+<hr />
+@{
+    foreach(var item in ViewBag.data4)
+    {
+        <h3>@item</h3>
+    }
+}
+<hr />
+
+@{
+    foreach(var item in ViewBag.data5)
+    {
+        <h3>@item</h3>
+    }
+}
+```
+## 배열도 출력 해봤다.
+![image](https://github.com/user-attachments/assets/850fa6ac-a64d-4da9-ac09-1ce8468edc85)
+***
