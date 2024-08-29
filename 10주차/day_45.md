@@ -277,3 +277,75 @@ namespace TagHelplersApp.Controllers
 ## 실행결과
 
 ![image](https://github.com/user-attachments/assets/07f84e72-52be-427a-a3cf-1e4eb8e9ac3d)
+
+## 나머지 여러가지를 실습 해봤다.
+```
+@model Student
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+<div class="container">
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+
+<div class="container p-5 my-5 border">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+<div class="container p-5 my-5 bg-danger border">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+<div class="container p-5 my-5 bg-primary border">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+
+<div class="row bg-info">
+	<div class="col-lg">.col-sm-3</div>
+	<div class="col-lg">.col-sm-3</div>
+	<div class="col-lg">.col-sm-3</div>
+	<div class="col-lg">.col-sm-3</div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+```
+## 실행결과
+
+![image](https://github.com/user-attachments/assets/3810b7f3-241c-4f32-ae48-552570bd1926)
