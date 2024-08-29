@@ -240,3 +240,40 @@ namespace TagHelplersApp.Controllers
 
 ![image](https://github.com/user-attachments/assets/a53b1191-6b0e-47ab-859d-35a8a0ee9818)
 
+## 부트스트링
+```
+@model Student
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Welcome</h1>
+	<p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="container">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+<div class="container">
+	<h1>My First Bootstrap Page</h1>
+	<p>This is some text.</p>
+</div>
+
+<div class="container p-5 my-5 border">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+<div class="container p-5 my-5 bg-danger border">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+<div class="container p-5 my-5 bg-primary border">
+	<h1>부트 스트링을 공부해 봅시다</h1>
+	<p>텍스트를 입력합니다.</p>
+</div>
+```
+## 실행결과
+
+![image](https://github.com/user-attachments/assets/07f84e72-52be-427a-a3cf-1e4eb8e9ac3d)
