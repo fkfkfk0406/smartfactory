@@ -169,3 +169,74 @@ namespace WebApplication6.Models
 
 ![image](https://github.com/user-attachments/assets/6a883072-facd-442a-b392-6d51564f6d35)
 ***
+## tag helper
+```
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using TagHelplersApp.Models;
+
+namespace TagHelplersApp.Controllers
+{
+	public class HomeController : Controller
+	{
+		private readonly ILogger<HomeController> _logger;
+
+		public HomeController(ILogger<HomeController> logger)
+		{
+			_logger = logger;
+		}
+
+		public IActionResult Index()
+		{
+			return View();
+		}
+
+		public IActionResult Privacy()
+		{
+			return View();
+		}
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+		public IActionResult Error()
+		{
+			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+		}
+	}
+}
+```
+```
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">TagHelpers</h1>
+</div>
+
+
+<div>
+    @*Link 만들기 *@
+
+    <a href="/Home/Contact">Contact Page 1</a> <br />
+
+    @Html.ActionLink("Contact Page 2", "Contact", "Home") <br />
+
+    <a href="@Url.Action("Contact", "Home")"> Contact Page 3</a> <br />
+
+    <a asp-controller="Home" asp-action="Contact">Contact Page 4</a>
+
+</div>
+```
+## 실행 결과
+
+![image](https://github.com/user-attachments/assets/6cc6705a-4cbc-4fee-839d-8f5a8d24d689)
+
+
+
+
+![image](https://github.com/user-attachments/assets/a53b1191-6b0e-47ab-859d-35a8a0ee9818)
+
