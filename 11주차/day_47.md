@@ -118,4 +118,68 @@ namespace EF8_001.Migrations
 
 ![image](https://github.com/user-attachments/assets/376f44dd-0cf6-4b75-bef3-188697919099)
 
+## visual studio linq 사용
+```
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
+namespace EF8_ALL
+{
+	public class Student
+	{
+		[Key]
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		public int ID { get; set; }
+
+		[MaxLength(30)]
+		public string Name { get; set; }
+
+		[MaxLength(30)]
+		public string HP { get; set; }
+	}
+	public class StudentDbContext : DbContext
+	{
+		public DbSet<Student> Students { get; set; }
+
+		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		{
+			optionsBuilder.UseSqlServer("Server = (local)\\SQLEXPRESS; " +
+						"Database = MyDb; " +
+						"Trusted_Connection = True;" +
+						"Encrypt=False");
+		}
+	}
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			var context = new StudentDbContext();
+			//context.Database.EnsureDeleted();
+			//context.Database.EnsureCreated();
+			//삽입(create, insert)
+			var st = new Student()
+			{
+				Name = "유재석",
+				HP = "010-5555-5555"
+			};
+			context.Students.Add(st);
+			context.SaveChanges();
+			Console.WriteLine("데이터가 삽입되었습니다.");
+
+			st = new Student()
+			{
+				Name = "강호동",
+				HP = "010-7777-7777"
+			};
+			context.Students.Add(st);
+			context.SaveChanges();
+			Console.WriteLine("데이터가 삽입되었습니다.");
+
+			context.Dispose();
+		}
+	}
+}
+```
+![image](https://github.com/user-attachments/assets/bfd6f8dc-423c-41bf-a214-568f9aaf1360)
+***
