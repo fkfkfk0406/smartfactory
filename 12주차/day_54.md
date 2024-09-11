@@ -1,4 +1,4 @@
-## 오늘도 아두이노로 실습을 했다.
+![image](https://github.com/user-attachments/assets/04d2f612-9c45-4707-87b2-8487ae23fbb5)![image](https://github.com/user-attachments/assets/ec7bd7f9-f6d2-4078-ac38-e90306beed98)## 오늘도 아두이노로 실습을 했다.
 ![image](https://github.com/user-attachments/assets/ec3d2189-6cb8-4e47-930c-3a207cf5cb98)
 
 
@@ -45,3 +45,12 @@ void loop()
 
 코드를 수정해서 흔들흔들하면 그래프가 바뀐다.
 ***
+![image](https://github.com/user-attachments/assets/9c3d4f1a-c53f-4073-bd7f-6be6d100447b)
+
+
+
+
+![image](https://github.com/user-attachments/assets/ee7bbdb5-1a3f-4435-87e2-6717a1ebe171)
+
+
+온습도 센서를 연결해서 값을 확인해보기도 했따.
