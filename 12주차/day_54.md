@@ -5,6 +5,9 @@
 
 이게 가속도(중력센서) 인데
 이걸로 실습을 해봤다~~
+
+
+
 ![image](https://github.com/user-attachments/assets/646e0e8d-1825-44d0-a960-75c06b643e79)
 
 
