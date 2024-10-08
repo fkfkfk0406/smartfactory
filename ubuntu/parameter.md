@@ -7,3 +7,10 @@
 
 
 그냥 리눅스다;
+그리고 한글 설정도 해줬따.
+
+
+
+![image](https://github.com/user-attachments/assets/87882ea4-675e-40a1-8808-1da9da99819d)
+
+
