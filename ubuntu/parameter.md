@@ -25,3 +25,10 @@
 
 
 단점은 sudo 명령어가 안먹는다는것~~~~~
+
+
+![image](https://github.com/user-attachments/assets/d0a37bc4-f171-4f65-98c4-2677b3fb0b4e)
+
+
+
+여기서 권한을 줄 수도 있다~~~~~~~
