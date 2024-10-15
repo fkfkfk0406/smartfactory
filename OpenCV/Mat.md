@@ -32,3 +32,39 @@ namespace Opencv_005
 
 오호,,,,,
 ***
+![image](https://github.com/user-attachments/assets/cd1bb760-44b2-4778-ac88-df1f7ee7569f)
+```
+using OpenCvSharp;
+
+namespace ConsoleApp82
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			String path = @"C:/Temp/opencv/cv_imgs/flip_test.jpg";
+			Mat image = new Mat(path, ImreadModes.Color);
+			if (image.Empty())
+			{
+				Console.WriteLine("경로나 이미지에 문제가 있습니다.");
+			}
+
+			Mat x_axis = new Mat();
+			Mat y_axis = new Mat();
+			Mat xy_axis = new Mat();
+
+			Cv2.Flip(image, x_axis, FlipMode.X);
+			Cv2.Flip(image, y_axis, FlipMode.Y);
+			Cv2.Flip(image, xy_axis, FlipMode.XY);
+
+			Cv2.ImShow("image", image);
+			Cv2.ImShow("x_axis", x_axis);
+			Cv2.ImShow("y_axis", y_axis);
+			Cv2.ImShow("xy_axis", xy_axis);
+
+			Cv2.WaitKey(0);
+			Cv2.DestroyAllWindows();
+		}
+	}
+}
+```
