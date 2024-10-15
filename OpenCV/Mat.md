@@ -1,4 +1,4 @@
-## Mat 을 해봤다.
+![image](https://github.com/user-attachments/assets/9f913e22-cfd5-49e8-a7db-ac6003eb786d)## Mat 을 해봤다.
 ![image](https://github.com/user-attachments/assets/4010cbc6-04d1-448b-aa5a-a5740cc171d2)
 ```
 using System;
@@ -68,3 +68,51 @@ namespace ConsoleApp82
 	}
 }
 ```
+***
+# 집도 한번 그려봤음
+```
+using OpenCvSharp;
+
+namespace ConsoleApp82
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			Scalar blue = new Scalar(255, 0, 0); 
+			Scalar red = new Scalar(0, 0, 255); 
+			Scalar white = new Scalar(255, 255, 255); 
+			Scalar black = new Scalar(0, 0, 0); 
+
+			Mat image = new Mat(700, 700, MatType.CV_8UC3, white);
+
+			// 사각형 그리기
+			Point pt1 = new Point(100, 200); 
+			Point pt2 = new Point(500, 600); 
+			Cv2.Rectangle(image, pt1, pt2, black, 2, LineTypes.AntiAlias); 
+
+			Point pt3 = new Point(300, 400); 
+			int radius = 200; 
+			Cv2.Circle(image, pt3, radius, blue, -1, LineTypes.AntiAlias); 
+
+			Point[] triangle =
+			{
+				new Point(100, 200), 
+                new Point(300, 50), 
+                new Point(500, 200) 
+            };
+			Cv2.FillPoly(image, new Point[][] { triangle }, red); 
+
+			Cv2.Line(image, new Point(100, 200), pt2, blue, 2, LineTypes.AntiAlias);
+			Cv2.Line(image, new Point(100, 600), new Point(500, 200), blue, 2, LineTypes.AntiAlias); 
+
+			Cv2.ImShow("직선 & 사각형", image);
+
+			Cv2.WaitKey(0);
+			Cv2.DestroyAllWindows();
+		}
+	}
+}
+```
+![image](https://github.com/user-attachments/assets/2e4ace22-219f-477a-87be-10d4f25aa529)
+
