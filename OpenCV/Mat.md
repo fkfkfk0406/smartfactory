@@ -21,3 +21,10 @@ namespace Opencv_005
 	}
 }
 ```
+
+
+
+![image](https://github.com/user-attachments/assets/313f1452-fe1b-4f2c-a76b-1e4b27d88b82)
+***
+
+
