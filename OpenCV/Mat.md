@@ -26,5 +26,9 @@ namespace Opencv_005
 
 ![image](https://github.com/user-attachments/assets/313f1452-fe1b-4f2c-a76b-1e4b27d88b82)
 ***
+![image](https://github.com/user-attachments/assets/fa2656d1-20ca-41f8-a31b-5a0a14e67aac)
 
 
+
+오호,,,,,
+***
