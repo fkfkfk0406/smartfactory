@@ -176,3 +176,41 @@ namespace CvBasicCam2
 
 ![image](https://github.com/user-attachments/assets/585b4a40-ab29-48a0-bd4f-73a7ec459f10)
 ***
+## 타원도 그려봤다.
+```
+using OpenCvSharp;
+
+namespace CvBasicCam2
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			Scalar orange = new Scalar(0, 165, 255);
+			Scalar blue = new Scalar(255, 0, 0);
+			Scalar magenta = new Scalar(255, 0, 255);
+			Mat image = new Mat(300, 700, MatType.CV_8UC3, new Scalar(255, 255, 255));
+
+			Point pt1 = new Point(120, 150);
+			Point pt2 = new Point(550, 150);
+
+			Cv2.Circle(image, pt1, 1, new Scalar(0), 1);
+			Cv2.Circle(image, pt2, 1, new Scalar(0), 1);
+
+			Cv2.Ellipse(image, pt1, new Size(100, 60), 0, 0, 360, orange, 2);
+			Cv2.Ellipse(image, pt1, new Size(100, 60), 0, 30, 270, blue, 4);
+
+
+			Cv2.Ellipse(image, pt2, new Size(100, 60), 30, 0, 360, orange, 2);
+			Cv2.Ellipse(image, pt2, new Size(100, 60), 30, -30, 160, magenta, 4);
+
+			Cv2.ImShow("타원 및 호 그리기", image);
+			Cv2.WaitKey(0);
+			Cv2.DestroyAllWindows();
+		}
+	}
+}
+```
+![image](https://github.com/user-attachments/assets/94c2cc43-3409-44b7-8ae6-7975aa48dcad)
+
+***
