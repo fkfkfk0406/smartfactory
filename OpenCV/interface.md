@@ -122,4 +122,57 @@ namespace CvBasicCam
 	}
 }
 ```
+## 원도 그려봤다
+```
+using OpenCvSharp;
 
+namespace CvBasicCam2
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			// 색상 정의
+			Scalar orange = new Scalar(0, 165, 255);
+			Scalar blue = new Scalar(255, 0, 0);
+			Scalar magenta = new Scalar(255, 0, 255);
+
+			// 흰색 배경의 이미지 생성
+			Mat image = new Mat(300, 500, MatType.CV_8UC3, new Scalar(255, 255, 255));
+
+			// 이미지 크기 및 중심점 정의
+			Size size = image.Size();
+			Point center = new Point(size.Width / 2, size.Height / 2);
+
+			// 원을 그릴 두 점 정의
+			Point pt1 = new Point(70, 50);
+			Point pt2 = new Point(350, 220);
+
+			// 원 그리기
+			Cv2.Circle(image, center, 100, blue); // 중심에 파란색 원
+			Cv2.Circle(image, pt1, 80, orange, 2); // pt1에 주황색 테두리 원
+			Cv2.Circle(image, pt2, 60, magenta, -1); // pt2에 채워진 자주색 원
+
+			// 글자 쓰기
+			int font = (int)HersheyFonts.HersheyComplex;
+			Cv2.PutText(image, "center_blue", center, HersheyFonts.HersheyComplex, 1.2, blue);
+			Cv2.PutText(image, "pt1_orange", pt1, HersheyFonts.HersheyComplex, 0.8, orange);
+
+			// pt2의 텍스트는 그림자 효과처럼 두 번 그리기
+			Point newPt2 = new Point(pt2.X + 2, pt2.Y + 2); // 약간 이동된 검정색 글자
+			Cv2.PutText(image, "pt2_magenta", newPt2, HersheyFonts.HersheyComplex, 0.5, new Scalar(0, 0, 0), 2);
+			Cv2.PutText(image, "pt2_magenta", pt2, HersheyFonts.HersheyComplex, 0.5, magenta, 1); // 원래 위치에 자주색 글자
+
+			// 결과 이미지 출력
+			Cv2.ImShow("원그리기", image);
+
+			// 키 입력 대기 후 창 닫기
+			Cv2.WaitKey(0);
+			Cv2.DestroyAllWindows();
+		}
+	}
+}
+```
+
+![image](https://github.com/user-attachments/assets/585b4a40-ab29-48a0-bd4f-73a7ec459f10)
+***
