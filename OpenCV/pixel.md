@@ -441,3 +441,53 @@ namespace ConsoleApp86
 }
 ```
 ![화면 캡처 2024-10-21 155645](https://github.com/user-attachments/assets/161ef4c0-a791-4aa9-b096-52b1813e07ab)
+***
+```
+using System.Collections.Specialized;
+using System.Net;
+using OpenCvSharp;
+
+namespace ConsoleApp86
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			Mat image1 = new Mat("C:\\Temp\\opencv\\cv_imgs\\add1.jpg", ImreadModes.Grayscale);
+			Mat image2 = new Mat("C:\\Temp\\opencv\\cv_imgs\\add2.jpg", ImreadModes.Grayscale);
+
+			if (image1.Empty() || image2.Empty())
+			{
+				Console.WriteLine("영상을 읽지 못 했습니다.");
+				Environment.Exit(1);
+			}
+
+			double alpha = 0.6;
+			double beta = 0.7;
+
+			Mat add_img1 = new Mat();
+			Cv2.Add(image1, image2, add_img1);
+
+			Mat add_img2 = new Mat();
+			Cv2.Add(image1 * 0.5, image2 * 0.5, add_img2);
+
+			Mat add_img3 = new Mat();
+			Cv2.AddWeighted(image1, alpha, image2, 1.0 - alpha, 0, add_img3);
+
+			Mat add_img4 = new Mat();
+			Cv2.AddWeighted(image1, alpha, image2, beta, 0, add_img4);
+
+			Cv2.ImShow("image1", image1);
+			Cv2.ImShow("image2", image2);
+			Cv2.ImShow("add_img1", add_img1);
+			Cv2.ImShow("add_img2", add_img2);
+			Cv2.ImShow("add_img3", add_img3);
+			Cv2.ImShow("add_img4", add_img4);
+
+			Cv2.WaitKey();
+			Cv2.DestroyAllWindows();
+		}
+	}
+}
+```
+![화면 캡처 2024-10-21 164526](https://github.com/user-attachments/assets/ed171d4e-4f81-4ed3-8ea8-26955f0ce817)
