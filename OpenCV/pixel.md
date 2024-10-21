@@ -491,3 +491,54 @@ namespace ConsoleApp86
 }
 ```
 ![화면 캡처 2024-10-21 164526](https://github.com/user-attachments/assets/ed171d4e-4f81-4ed3-8ea8-26955f0ce817)
+***
+```
+using System.Collections.Specialized;
+using System.Net;
+using OpenCvSharp;
+
+namespace ConsoleApp86
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			Mat image = new Mat("C:\\Temp\\opencv\\cv_imgs\\contrast_test.jpg", ImreadModes.Grayscale);
+
+			if (image.Empty())
+			{
+				Console.WriteLine("영상을 읽지 못 했습니다.");
+				Environment.Exit(1);
+			}
+
+			Scalar avg = Cv2.Mean(image);
+			double avgValue = avg.Val0 / 2.0;
+
+			Mat dst1 = new Mat();
+			Cv2.Multiply(image, 0.5, dst1);
+
+			Mat dst2 = new Mat();
+			Cv2.Multiply(image, 2.0, dst2);
+
+			Mat dst3 = new Mat();
+			Cv2.AddWeighted(image, 0.5, Mat.Ones(image.Size(), image.Type()) * avgValue, 0.5, 0.0, dst3);
+			
+			Mat dst4 = new Mat();
+			Cv2.AddWeighted(image, 2.0, Mat.Ones(image.Size(), image.Type()) * avgValue, 1.0, 0.0, dst4);
+
+
+			 Cv2.ImShow("Original Image", image);
+            Cv2.ImShow("dst1 - 대비 감소", dst1);
+            Cv2.ImShow("dst2 - 대비 증가", dst2);
+            Cv2.ImShow("dst3 - 평균 이용 대비 감소", dst3);
+            Cv2.ImShow("dst4 - 평균 이용 대비 증가", dst4);
+
+
+			Cv2.WaitKey();
+			Cv2.DestroyAllWindows();
+		}
+	}
+}
+```
+![화면 캡처 2024-10-21 170557](https://github.com/user-attachments/assets/5cdc5c2a-4348-4068-874b-5097357cf2b9)
+***
