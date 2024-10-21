@@ -389,3 +389,55 @@ namespace ConsoleApp86
 ```
 ![image](https://github.com/user-attachments/assets/fcfe0bdb-caef-4578-91ca-9e5ee3dd8b4d)
 ***
+```
+using System.Collections.Specialized;
+using System.Net;
+using OpenCvSharp;
+
+namespace ConsoleApp86
+{
+	internal class Program
+	{
+		static void Main(string[] args)
+		{
+			Mat image = new Mat("C:\\Temp\\opencv\\cv_imgs_2\\bright.jpg", ImreadModes.Grayscale);
+			if (image.Empty())
+			{
+				Console.WriteLine("영상을 읽지 못 했습니다.");
+				Environment.Exit(1);
+			}
+
+			Mat dst1 = new Mat();
+			Mat dst2 = new Mat();
+			Mat dst3 = new Mat();
+			Mat dst4 = new Mat(image.Size(), image.Type());
+			Mat dst5 = new Mat(image.Size(), image.Type());
+
+			Cv2.Add(image, new Scalar(100), dst1);
+			Cv2.Subtract(image, new Scalar(100), dst2);
+			Cv2.Subtract(new Scalar(255), image, dst3);
+
+			for (int i = 0; i < image.Rows; i++)
+			{
+				for (int j = 0; j < image.Cols; j++)
+				{
+					dst4.Set(i, j, image.At<byte>(i, j) + 100);
+
+					dst5.Set(i, j, 255 - image.At<byte>(i, j));
+				}
+			}
+
+			Cv2.ImShow("Image", image);
+			Cv2.ImShow("dst1", dst1);
+			Cv2.ImShow("dst2", dst2);
+			Cv2.ImShow("dst3", dst3);
+			Cv2.ImShow("dst4", dst4);
+			Cv2.ImShow("dst5", dst5);
+
+			Cv2.WaitKey();
+			Cv2.DestroyAllWindows();
+		}
+	}
+}
+```
+![화면 캡처 2024-10-21 155645](https://github.com/user-attachments/assets/161ef4c0-a791-4aa9-b096-52b1813e07ab)
